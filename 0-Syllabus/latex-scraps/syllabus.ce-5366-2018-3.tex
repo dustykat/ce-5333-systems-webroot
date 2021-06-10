@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+% REVISION NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2008-0814 Location, Date, Time
+% 2008-0814 fixed citations -- added bibliography.
+%
+%
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+%\geometry{landscape}                
+\usepackage[parfill]{parskip}    
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage[final]{pdfpages}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5366}
+\rhead{TEMPLATE}
+\lfoot{CE 5366 - }
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{DRAFT NO. 1}
+\renewcommand\headrulewidth{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\section*{\center{ {CE 5366 -- Water Resources Management} \\ {} } }
+\subsection*{{Course Location, Textbook, Instructor Contact Information}}
+\begin{tabular}{p{1.5in}p{5.0in}}
+Class meetings:  &    14:00-15:20 EC 201 \\
+Instructor: & Theodore G. Cleveland, CE Room 203F \\
+%TA: & none \\
+Office Hours: & Open Door Policy \\
+%~ & T. Cleveland MW 08:00 - 10:00 \\
+Telephone: & (806)834-XXXX \\
+%Cell Phone: & (832) 722-4185 (more reliable than office phone) \\
+E-mail: & \texttt{theodore.cleveland@ttu.edu}\\
+Web: & \texttt{http://theodore-macbookpro.ttu.edu/moodle/} \\
+%%%%%%2010-0814TGC%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Textbook(s) : &  materials on server; representative list at end of document\\
+~ & Temporary guest access until 1 Sep 2018.  \\
+~ & Guest password is: \textbf{jamesbond} \\ 
+%~ & \cite{Wurbs2002}& \cite{Chin2006} & \cite{mays2011} \\
+%~ & \cite{ncees2008} & \cite{rossman2000} & \cite{rossman2009} \\
+%~ & \cite{gironas2009} & and more ... & \\
+ %\cite{cleveland2013} \\
+ %%%%%%2010-0814TGC%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Copyright : & \textsl{Copyright $\copyright$ 2018 Theodore G. Cleveland, all rights reserved.} \\
+\end{tabular}
+\subsection*{{Catalog Description}}
+\begin{quote} \textbf{5366. Water Resources Management (3:3:0).}  Prerequisite: Instructor consent. Models and other technical elements of water resources systems in context of the political, social, and other environments in which they exist.
+\end{quote}
+\section*{Objectives}
+Upon completion of this course, students should be able to:
+\begin{enumerate}
+\item Construct solution tools using \textbf{R} as a computation engine and \textbf{Excel} as an interface for small-scale linear and non-linear programming problems.
+\item Locate and use solution tools for large-scale linear and non-linear programming problems.
+\item Formulate integrated simulation and optimization models for improved decision making and analysis in water resources management.
+\item Quantify risks and uncertainties in planning, design, and management objective(s) in water resources systems. 
+\item Evaluate alternatives in water resources management with respect to economic, environmental, ecological, regulatory, and social aspects. 
+\item Describe the large scale complex interactions between engineered infrastructure and natural systems and the issues associated with holistic decision-making.
+\end{enumerate}
+%\clearpage
+\section*{Course Schedule}
+\begin{longtable}{p{0.8in} | p{3.5in} | p{1.0in} | p{0.5in} | }
+%%%%%%%%
+\caption[]{CE 5366 Schedule -- FALL 2018
+\newline ~ \newline
+\footnotesize
+% DATE : Date of scheduled activity$~\approx$ 1.5 hours of contact time; 
+%  TOPIC: Content synopsis; DUE: indicated exercise due\\
+} \label{tab:lecture-schedule} \\
+\hline
+DATE & TOPIC & READINGS  & DUE \\
+\hline
+\endfirsthead
+\caption[]{CE3305 Schedule (Tentative  --- Continued} \\
+\hline
+DATE & TOPIC & READINGS  & DUE\\
+\hline
+\endhead
+\hline
+\multicolumn{4}{l}{\emph{Continued on next page}}
+\endfoot
+\hline
+\endlastfoot
+%%%%%%
+%ID & DATE & TOPIC & REMARKS & READING \\
+\hline
+\hline
+%%%%%%%%%%%%%%%%%%%WEEK001%%%%%%%%%%%%%%%%%%%%%%%%%%
+\texttt{28 Aug 18} & Introduction (Video Lecture) & Lesson-1 &  \\\texttt{30 Aug 18} & Water Law & Lesson-2 &  \\\texttt{04 Sep 18} & Psychology of Decision Making & Lesson-3 &  \\\texttt{06 Sep 18} & Programming with R  & Lesson-4 & ES-1 \\\texttt{11 Sep 18} & Allocation by Linear Programming (LP) & Lesson-5 &  \\\texttt{13 Sep 18} & Allocation by Non-Linear Programming (NLP) & Lesson-6 & ES-2 \\\texttt{18 Sep 18} & Economic Valuation of Alternatives & Lesson-7 &  \\
+\hline
+\hline\texttt{20 Sep 18} & Job Fair &  &  \\\hline
+\hline
+\texttt{25 Sep 18} & Economic Mathematics (Video Lecture) & Lesson-8 &  \\\texttt{27 Sep 18} & Benefit/Cost Analysis (Video Lecture) & Lesson-9 & ES-3 \\\texttt{02 Oct 18} & Price Theory Allocation of Scarce Resources & Lesson-10 &  \\\texttt{04 Oct 18} & Economic Optimality  & Lesson-11 & ES-4 \\\texttt{09 Oct 18} & Welfare Economics & Lesson-12 &  \\\texttt{11 Oct 18} & Simulation Concepts & Lesson-13 & ES-5 \\\texttt{16 Oct 18} & River Basin Flow Simulation & Lesson-14 &  \\\texttt{18 Oct 18} & Groundwater Basin Flow Simulation & Lesson-15 & ES-6 \\\texttt{23 Oct 18} & Mass Transport Concepts & Lesson-16 &  \\\texttt{25 Oct 18} & Dissolved Oxygen in Rivers & Lesson-17 & ES-7 \\\texttt{30 Oct 18} & Lake Water Quality Simulation & Lesson-18 &  \\\texttt{01 Nov 18} & Groundwater Basin Quality Simulation & Lesson-19 & ES-8 \\\texttt{06 Nov 18} & Optimization Concepts -- Merit Functions & Lesson-20 &  \\\texttt{08 Nov 18} & Water Treatment Allocation by NLP & Lesson-21 & ES-9 \\\texttt{13 Nov 18} & Incorporating Uncertainty & Lesson-22 &  \\\texttt{15 Nov 18} & Water Diversion - Stochastic Programming & Lesson-23 & ES-10 \\\texttt{20 Nov 18} & Water Diversion - Chance Constraints & Lesson-24 &  \\
+\hline
+\hline\texttt{22 Nov 18} & Thanksgiving Holiday &  &  \\
+\hline
+\hline
+\texttt{27 Nov 18} & Resource Allocation - Groundwater Supply & Lesson-25 & ES-11 \\\texttt{29 Nov 18} & Resource Allocation - Pecora Basin, Chile & Lesson-26 &  \\\texttt{04 Dec 18} & Resource Allocation - River Water Quality & Lesson-27 & ES-12 \\
+\hline
+\hline\texttt{10 Dec 18} & Final Exam (Sec 001)(13:30-16:00) &  &  \\
+\hline
+\hline
+%\hline
+%\end{tabular}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{longtable}
+\normalsize
+
+%\includepdf[pages=1]{./Summer_School_2015_V07.pdf}
+%\clearpage
+\section*{Assessment Instruments}
+%\subsection*{Homework}
+%Homework will be due at the beginning of class on the second class day after it is assigned. 
+%You may work in teams and submit as a team assignment.  Identify all team members.
+%Homework problem solving approach:
+%\begin{enumerate}
+%\item State the problem and sketch the system
+%\item Identify and list the given information
+%\item Identify and list the unknowns
+%\item Identify governing equations and state assumptions
+%\item Solve for unknowns and calculate results
+%\item Discuss the results
+%\end{enumerate}
+%\subsection*{Quiz}
+%Five (5) quizzes are scheduled.\footnote{The quizzes replace the usual mid-term exam.}   These quizzes will be comprised of several problems, possibly verbatim from the homeworks, and conceptual questions derived from lecture and homework materials. 
+%\subsection*{Field Trip Reports}
+%Students are to write a trip report;  the report is to be in memorandum format no longer than two pages of text.  Photographs are encouraged.   The reports will be evaluated for content, insight, spelling, and grammar.    A template will be provided before travel.
+\subsection*{Participation}
+In class participation includes attending classes and participating in class discussions. Professional conduct is expected in all class activities. Please let the instructor know if you must miss a class for academically-related extracurricular activities, debilitating illness, or death in the family. You are responsible for any work that was missed on the day of your absence.
+\subsection*{Homework}
+Exercises are via upload to the class Moodle server.  The server accepts \textbf{.pdf} submissions as a single file.  For typeset documents you can save/export them as \textbf{.pdf}.  Handwritten content will need to be scanned into a \textbf{.pdf}, and bundled into a single file.   \textbf{R} scripts can be screen captured and inserted into the documents as needed. 
+
+%The email ``About'' line should read ``CE5366-ES\#-FIRSTNAME-LASTNAME''\footnote{The \# will be replaced by the exercise set number; the FIRSTNAME is your first name, the LASTNAME is your last name.  For example:  \texttt{CE5366-ES3-Polar-Bear} would be the about line for Polar Bear's ES3 solution.} a filter is used to capture and redirect these emails to a collection repository for evaluation.  Failure to correctly format this portion of the email may result in grading delays or complete loss of an otherwise acceptable homework solution.\\~\\
+LATE HOMEWORK within 1 week of the due date will be accepted, but the score will be multiplied by 1/2 (50\% reduction); homework received one week beyond the due date will not be graded.  The server is the final arbiter of timeliness, it is programmed to close submissions one week after a due date.
+
+Homework are evaluated as professional engineering work and should be completed in a neatly organized and
+reproducible fashion as specified. Students may work with other students; however, the student is responsible for his/her own work and must submit separately. 
+
+Note: Computer usage will be extensive and students will be required to download and run
+computer models. In addition, ability to use spreadsheets, word processing and presentation
+software will be necessary. Any written programs must be attached to the homework.
+
+%\subsection*{Project}
+%Project(s) done in ~three person teams will involve data collection and analysis, system design, and engineering judgment as needed for the project scope. The tentative project due date is shown above. The projects typically are interdisciplinary and consider such aspects of water resources planning and management as: engineering, law; economics; hydrology, climatology, hydrogeology; environmental health; computer modeling; population growth; land use planning; regional development; or politics. Each group, or individual, will make an oral presentation of their results to the class and publish a final report
+\subsection*{Exams}
+Exams will be a combination of in class and take home. No make-up exams will be given for unexcused absences. If you must miss an exam, you must notify the instructor prior to the exam date to determine whether that absence is excused.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Grading Policy}
+Final grades are determined based on performance during the course.
+Letter grades will be assigned using University standards.  
+The \textbf{approximate} weighting of graded material in determining the final grade is as follows\footnote{Graded materials with fewer than 100 points will have raw scores normalized to 100 points for calculating the final grade.}:
+
+\begin{table}[h!]
+   \centering
+   \begin{tabular}{l l}
+Item & Percent of Grade \\
+\hline
+\hline
+%Trip Reports  & footnote above \\
+Participation  & ~~~~ 10\% \\
+Homework   &  ~~~~ 50\% \\
+Final Exam  &  ~~~~ 40\% \\
+\hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\clearpage
+\subsection*{ABET Program Outcomes}
+A subset of the ABET Program Outcomes are addressed in CE 4333, these outcomes are listed below:\footnote{Item 3[b] below is only partially fulfilled -- in this course students will analyze and interpret data, design of experiments is beyond the scope of the class.}
+
+\begin{tabular}{p{0.5in}p{5.5in}}
+\texttt{3[a].}  & Ability to apply knowledge of mathematics, science, and engineering.\\
+\texttt{3[b].}  & Ability to design and conduct experiments, as well as to analyze and interpret data.\\
+\texttt{3[e].}  & Ability to identify, formulate, and solve engineering problems.\\
+\texttt{3[i].}   & Recognition of need for life-long learning.\\
+\texttt{3[k].}  & Ability to use the techniques, skills, and modern engineering tools necessary for engineering practice.\\
+\texttt{8[d].}  & Proficiency in water resources engineering.\\
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Academic Misconduct}
+Refer to the Texas Tech University Catalog and operating policies (OP 34.12) regarding
+academic integrity, cheating, and plagiarism. Academic dishonesty will not be tolerated.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Disability Policy}
+\textsl{ ``Any student who, because of a disability, may require special arrangements in order to meet
+the course requirements should contact the instructor as soon as possible to make any necessary arrangements.
+Students should present appropriate verification from Student Disability Services during the instructors office hours. Please note instructors are not allowed to provide classroom accommodations
+to a student until appropriate verification from Student Disability Services has been provided.
+For additional information, you may contact the Student Disability Services office at 335 West Hall or
+806- 742-2405."}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\bibliographystyle{chicago}	         % (uses file "chicago.bst")
+\bibliography{ce3372_spring2010}		% expects file "0-6070_LitRev.bib"
+\end{document}
+
+
