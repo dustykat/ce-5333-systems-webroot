@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" >
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a  href="../9-Announcements/">Announcements</a>
+            <a href="../0-Syllabus/ce5366.pdf">Syllabus</a>
+            <a class="active" href="#">Lectures</a>
+            <a href="../2-Exercises/">Exercises</a>
+            <a href="../3-Readings/">Readings</a>
+            <a href="../4-Toolkit/">Toolkit</a>
+
+        </div>
+        
+        <div style="padding-left:16px">
+            <h2>Lecture Switchboard</h2>
+            <p>Expand sections below by clicking the "+" sign to the right of the section for more detail about the section.   In each section are links to individual lectures. </p>
+        </div>
+        
+        
+
+        <button class="accordion"> Economic theory and applications in analysis and management of water resources; application of price theory to allocation of water and related renewable resources; benefit-cost analysis with applications to water resources. <br><br>(Lectures 1-12) </button>
+        <div class="panel">
+            <div class="content-columns">
+            <div class="content-column-left">
+            <p><a href="./Lecture01/"> Lecture-1 </a> Introduction </p>
+            <p><a href="./Lecture02/"> Lecture-2 </a> Resource Allocation </p>
+            <p><a href="./Lecture03/"> Lecture-3 </a> *Psychology of Decision Making </p>
+            <p><a href="./Lecture04/"> Lecture-4 </a> *Programming with R </p>
+            <p><a href="./Lecture05/"> Lecture-5 </a> *Linear Programming (LP) for Resource Allocation </p>
+                <p><a href="./Lecture06/"> Lecture-6 </a> *Non-Linear Programming (NLP) for Resource Allocation </p>
+            </div>
+            <div class="content-column-right">
+
+                <p><a href="./Lecture07/"> Lecture-7 </a> *Economic Valuation of Alternatives </p>
+                <p><a href="./Lecture08/"> Lecture-8 </a> *Economic Mathematics </p>
+                <p><a href="./Lecture09/"> Lecture-9 </a> *Benefit/Cost Analysis </p>
+                <p><a href="./Lecture10/"> Lecture-10 </a> *Price Theory Allocation of Scarce Resources </p>
+                <p><a href="./Lecture11/"> Lecture-11 </a> *Economic Optimality </p>
+                <p><a href="./Lecture12/"> Lecture-12 </a> *Welfare Economics </p>
+            </div>
+            </div>
+        </div>
+        
+        <button class="accordion">Simulation techniques for water resource systems. River basin models. Groundwater basin models. Water quality models. <br><br> (Lectures 13-19) </button>
+        <div class="panel">
+            <div class="content-columns">
+            <div class="content-column-left">
+            <p><a href="./Lecture13/"> Lecture-13 </a> *Simulation Concepts </p>
+            <p><a href="./Lecture14/"> Lecture-14 </a> *River Basin Flow Simulation </p>
+            <p><a href="./Lecture15/"> Lecture-15 </a> *Groundwater Basin Flow Simulation </p>
+            <p><a href="./Lecture16/"> Lecture-16 </a> *Mass Transport Concepts </p>
+            </div>
+            <div class="content-column-right">
+            <p><a href="./Lecture17/"> Lecture-17 </a> *Dissolved Oxygen in Rivers </p>
+            <p><a href="./Lecture18/"> Lecture-18 </a> *Lake Water Quality Simulation </p>
+            <p><a href="./Lecture19/"> Lecture-19 </a> *Groundwater Basin Quality Simulation </p>
+            </div>
+            </div>
+        </div>
+        
+        <button class="accordion">Application of mathematical programming techniques to water resource systems. Reservoir management and operation, optimal timing, sequencing and sizing of water resources projects, and multiobjective planning and conjunctive use of surface water and groundwater. <br><br>(Lectures 20-27) </button>
+        <div class="panel">
+            <div class="content-columns">
+            <div class="content-column-left">
+ 
+            <p><a href="./Lecture20/"> Lecture-20 </a> *Optimization Concepts - Merit Functions </p>
+            <p><a href="./Lecture21/"> Lecture-21 </a> *Water Treatment Allocation by NLP </p>
+            <p><a href="./Lecture22/"> Lecture-22 </a> *Incorporating Uncertainty </p>
+            <p><a href="./Lecture23/"> Lecture-23 </a> *Water Diversion - Stochastic Programming </p>
+            </div>
+            <div class="content-column-right">
+
+            <p><a href="./Lecture24/"> Lecture-24 </a> *Water Diversion - Chance Constraints </p>
+            <p><a href="./Lecture25/"> Lecture-25 </a> *Resource Allocation - Groundwater Supply </p>
+            <p><a href="./Lecture26/"> Lecture-26 </a> *Hypothetical Case - Pecora Basin, Chile</p>
+            <p><a href="./Lecture27/"> Lecture-27 </a> *Resource Allocation - River Water Quality </p>
+            </div>
+            </div>
+        </div>
+<!-- JavaScripts for this page -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        }
+    }
+</script>
+
+    </body>
+</html>

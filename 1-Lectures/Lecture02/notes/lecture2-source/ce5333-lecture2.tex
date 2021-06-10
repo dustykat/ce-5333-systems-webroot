@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage{./styles/daves,fancyhdr,natbib,url}
+\usepackage{amsmath,amssymb,caption,graphicx,pdfpages,lscape}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{paralist}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\thispagestyle{plain}
+\bibliographystyle{./styles/chicago}
+%\bibliographystyle{apalike}
+\lhead{CE 5333}
+\rhead{SPRING 2020}
+\lfoot{CE 5333 -- Cleveland}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{REVISION NO. 3}
+\renewcommand\headrulewidth{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5333 -- Systems Analysis Tools for Water Resources}  {L02}}},
+\end{center}
+\begingroup
+\begin{tabular}{p{1in} p{5in}}
+Topics: & i) Resource Allocation\\
+~ & ii) Decision Making Concepts \\
+~ & iii) Tools to Support and Implement Decisions (Integration)\\
+\end{tabular}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resource Allocation}
+The prime focus (of this class) is water resources management, although I suspect the principles extend beyond that realm.Water resources management is the activity of planning, developing, distributing and managing the optimum use of water resources. 
+Water resource management planning considers the competing demands for/on water (quantity, quality, location, and timing), 
+and seeks to \textbf{allocate} water on an \textbf{equitable} basis to satisfy all uses and demands
+
+Consider the meanings of \textbf{allocate}
+\begin{enumerate}[1)]
+\item to apportion for a specific purpose or to particular persons or things : for example to allocate (distribute) tasks among human and automated components\item to set apart or earmark :  for example to allocate (designate) a section of the building for specialresearch purposes
+\end{enumerate}
+
+Consider the meanings of  \textbf{equity}
+\begin{enumerate}[1)]
+\item having or exhibiting equity : dealing fairly and equally with all concerned; anequitable settlement of the dispute\item existing or valid in equity as distinguished from law; an equitable defense
+\end{enumerate}Because the resource is scarce; allocation will necessarily deny the resource to some, and supply it to others.
+Equity implies some kind of ``fairness'' in that allocation.
+
+Allocation requires decisions be made and that is done by either an individual decision maker (like the president) or collective decision maker(s) (like a board of directors).
+\section{Decision Making Concepts}
+How do individuals and groups make decisions?
+\begin{itemize}\item Some people may seem indecisive or inconsistent. They may avoid making decisions aslong as possible. The same reluctance to make decisions also happens in organizations orinstitutions.\item On the other hand, some people and groups may be accused of "leaping to conclusions"or making a decision "without considering all the facts."
+\end{itemize}
+The dicotomy implies that decisions should be made by collecting and weighing various elements ina rational way. Alternatives must exist, or there is no decision required.
+
+There are substantial psychological aspects in decision making, peoples choices are influenced by how the alternatives are presented.
+Consider Figure \ref{fig:probability-decision}.  
+The decision is select \textbf{A} or \textbf{B}, and the outcomes are shown.
+The upper panel presents the alternative in a survival context, whereas the lower panel presents the alternatives in a mortality context.
+Which is the best decision?
+\begin{figure}[h!]%  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[height=4in]{./figures/probability-decision.png} 
+   \caption{A decision presented with probable outcomes}
+   \label{fig:probability-decision}
+\end{figure}
+What we have so far are scarce resources, and a desire to alloctate fairly.
+To allocate we need to make decisions; and decisions (by people) are emotional at themoment of the decision.
+Hence any tool to help make the decision (think spread the blame) is useful.
+
+The challenge of resources management is to define ``what is fair'' for a situation; define alternatives (present a decision point); define and implement tools to support the decision.
+\section{Tools to Support and Implement Decisions}
+Tools to support the decision will need to address
+\begin{enumerate}\item Value to alternatives -- how to measure ``fairness''\item Policy to rank the value(s)
+\item Policy to guide the decision
+\end{enumerate}It may be possible in a well defined situation to hand off the decision to an algorithm (narrow domain AI). 
+An aircraft autopilot is an example of such a situation -- but even that has risks; just ask Boeing!
+
+Tools to implement the decision will need to address
+\begin{itemize}\item Do we control the system?  \\ SCADA Algorithm operating a water distribution network --- canprobably be fully autonomous with little human intervention\item Do we just influence the system \\Voluntary compliance versus risk of apprehension for water qualitymanagement
+\end{itemize}
+
+
+
+\begin{thebibliography}{9}
+
+%\bibitem[Asquith (2002)]{AsquithRegulation2002}
+%Asquith, W.H., 2002, Effects of Regulation on L-moments of Annual Peak Streamflow in Texas.
+%U.S. Geological Survey Water Resources Investigations Report 01--4243,
+%\url{https://pubs.usgs.gov/wri/wri014243/pdf/wri01-4243-new.pdf}
+
+\bibitem[Faulconbridge (2019)]{Faulconbridge2019}
+Faulconbridge, Ian. Introduction to Systems Engineering (Kindle Location 181). Argos Press Pty Ltd. Kindle Edition. 
+
+\bibitem[Frank (2002)]{Frank2002}
+Frank, M. (2002), ``What is ``engineering systems thinking''?'', Kybernetes, Vol. 31 No. 9/10, pp. 1350-1360. \url{https://doi.org/10.1108/03684920210443554}
+\end{thebibliography}
+
+\end{document}
