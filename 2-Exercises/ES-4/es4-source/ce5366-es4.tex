@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+% REVISION NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2008-0814 Location, Date, Time
+% 2008-0814 fixed citations -- added bibliography.
+%
+%
+%\usepackage{geometry}                
+%\geometry{letterpaper}                   
+%\geometry{landscape}                
+\usepackage[parfill]{parskip}    
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage[final]{pdfpages}
+\usepackage{paralist} 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5366}
+\rhead{FALL 2018}
+\lfoot{CE 5333 -- Cleveland}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{REVISION NO. 1}
+\renewcommand\headrulewidth{0pt}
+
+%%%%%%%%%% Will's stuff BELOW %%%%%%%
+\usepackage[left=1.25in, right=1.25in,
+            top=1in, bottom=1in]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}
+
+\usepackage{ragged2e}
+
+\usepackage{xcolor}
+\newcommand{\codeRcolor}{0.93}
+\newcommand{\codeGcolor}{0.93}
+\newcommand{\codeBcolor}{0.93}
+\definecolor{lightgrey}{rgb}{\codeRcolor,
+                             \codeGcolor,
+                             \codeBcolor}
+
+\newcommand{\listingfont}{\fontsize{7pt}{8pt}\selectfont\ttfamily}
+\usepackage{listings}
+\lstset{basicstyle = \listingfont,
+        breaklines = true,
+        frame=tb,
+        xleftmargin=12pt,
+        framexleftmargin=6pt,
+        framexrightmargin=6pt,
+        xrightmargin=12pt,
+        columns=fixed}
+\lstset{lineskip=-1pt}
+\lstset{backgroundcolor=\color{lightgrey}}
+
+
+\usepackage[font={footnotesize},
+            labelfont={sf,bf},
+            textfont={sf},
+            singlelinecheck=false,
+            labelsep=none,
+            justification=RaggedRight,
+            aboveskip=0pt,
+            belowskip=7pt plus 1pt minus 1pt,
+            textformat=period]{caption}
+\DeclareCaptionLabelSeparator{mystyle}{.\quad}
+\captionsetup{labelsep=mystyle}
+%%%%%%%%% Will's Stuff ABOVE %%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5366 -- Water Resources Management}  {Exercise Set 4}}}
+\end{center}
+\begingroup
+\begin{tabular}{p{1in} p{5in}}
+Purpose: & Engineering economic mathematics \\
+\end{tabular}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\small{Exercise}}
+\begin{enumerate}
+\item Two mutually exclusive project alternatives that provide identical service are described below: \\~\\
+\begin{tabular}{lrrrr}
+Project ID & Initial Cost & Annual O\&M & Salvage Value & Lifespan \\
+\hline
+\hline
+A & \$10,000 & \$2,000 & \$1,000 & 10  \\
+B & \$25,000 & \$1,500 & \$5,000 & 20  \\
+\end{tabular}\\~\\
+Assuming a discount rate of 5\% and using the \textbf{R} script in Listing \ref{lst:AnnualCosts} (or write your own)\footnote{The script here is pretty crude.  User supplies a guess of annual costs, and by repeated application changes the guess until the computed present value of the annual costs is equal to the pre-determined present value based on the supplied components.  A vast improvement would be to make the guess-and-check automatic; Newton's method (finite-difference approximations to the derivative) or bisection would work well.}, determine:
+\begin{enumerate}[a)]
+\item Which alternative has the lower annual cost?
+\item What is the incremental annual cost of going from the less to the more expensive alternative?
+\item Select the best alternative by the present-worth method.
+\item What is the rate of return on the incremental investment of B?
+\item What initial cost of replacing A after 10 years would make the two alternatives equivalent, assuming none of the other costs change?
+
+\end{enumerate}
+\end{enumerate}
+
+\begin{lstlisting}[caption=R code for Trial-Error to find equivalent annual cost, label=lst:AnnualCosts]
+# cash flow calculations for ES4
+rm(list=ls())
+discount_rate <- 0.03 # 3% interest rate
+# option A
+# compute present values of expenses first 10 years
+initial_costA <- 10000
+operationsA <- rep(2000,10)
+salvageA <- 1000
+### compute the PV of the operations cost
+present_value <- numeric(0)
+present_value <- 0
+for (i in 1:10){ #find present value of the i-th year payment
+  present_value[i] <- operationsA[i]*(1+discount_rate)^(-i)
+}
+operationsAPV <- sum(present_value)
+### compute the PV of the salvage payment
+salvageAPV <- salvageA*(1+discount_rate)^(-10)
+#print(cbind(initial_costA,operationsAPV,salvageAPV))
+# now compute the PV for the second 10 years
+presentValueA1 <- initial_costA+operationsAPV+salvageAPV
+presentValueA2 <- presentValueA1*(1+discount_rate)^(-10)
+presentValueA <- presentValueA1+presentValueA2
+message("Present Value A = $",presentValueA)
+########## Alternative B #################
+initial_costB <- 25000
+operationsB <- rep(1500,20)
+salvageB <- 5000
+### compute the PV of the operations cost
+present_value <- numeric(0)
+present_value <- 0
+for (i in 1:20){ #find present value of the i-th year payment
+  present_value[i] <- operationsB[i]*(1+discount_rate)^(-i)
+}
+operationsBPV <- sum(present_value)
+### compute the PV of the salvage payment
+salvageBPV <- salvageB*(1+discount_rate)^(-20)
+#print(cbind(initial_costB,operationsBPV,salvageBPV))
+presentValueB <- initial_costB+operationsBPV+salvageBPV
+message("Present Value B = $",presentValueB)
+# now convert both to annual costs
+### compute the PV of the operations cost
+present_valueA <- numeric(0)
+present_valueA <- 0
+### compute the PV of the operations cost
+present_valueB <- numeric(0)
+present_valueB <- 0
+## read in guess for annual cost
+  avA <- readline(prompt="Enter annual cost for alternative A: ")
+  avA <- as.numeric(avA)
+  avB <- readline(prompt="Enter annual cost for alternative B: ")
+  avB <- as.numeric(avB)
+annualA <- rep(avA,20)
+annualB <- rep(avB,20)
+for (i in 1:20){ #find present value of the i-th year payment
+  present_valueA[i] <- annualA[i]*(1+discount_rate)^(-i)
+  present_valueB[i] <- annualB[i]*(1+discount_rate)^(-i)
+}
+message("annual cost A = $",avA," PVA = $",sum(present_valueA)," PValue A = $",presentValueA)
+message("annual cost B = $",avB," PVB = $",sum(present_valueB)," PValue B = $",presentValueB)
+
+
+
+### CONSOLE INTERACTION ###
+> source('~/Dropbox/1-Teaching/ce-5366/2-Exercises/ES-3o/cash-flow-ES3.R')
+Present Value A = $48493.6585389613
+Present Value B = $50084.5910616149
+Enter annual cost for alternative A: 3259.5
+Enter annual cost for alternative B: 3366.5
+annual cost A = $3259.5 PVA = $48493.1293076547 PValue A = $48493.6585389613
+annual cost B = $3366.5 PVB = $50085.0191177235 PValue B = $50084.5910616149
+> \end{lstlisting}  
+
+
+
+\end{document}
+
+

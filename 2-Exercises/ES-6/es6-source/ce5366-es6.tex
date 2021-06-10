@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+% REVISION NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2008-0814 Location, Date, Time
+% 2008-0814 fixed citations -- added bibliography.
+%
+%
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+%\geometry{landscape}                
+\usepackage[parfill]{parskip}    
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage[final]{pdfpages}
+\usepackage{paralist} 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5333}
+\rhead{FALL 2017}
+\lfoot{CE 5333 -- Cleveland}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{DRAFT NO. 1}
+\renewcommand\headrulewidth{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5333 -- Special Topics in Water Resources}  {Exercise Set 6}}}
+\end{center}
+\begingroup
+\begin{tabular}{p{1in} p{5in}}
+Purpose: & Application of Simulation Modeling and Linear Programming to a Groundwater Allocation Situation  \\
+\end{tabular}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\small{Exercise}}
+\begin{enumerate}
+\item Read :
+\begin{enumerate}[a)]
+\item Chapter 10 of Bear, Hydraulics of Groundwater.  The chapter is about groundwater models. Pay special attention to pages 447-455 (Multiple-Cell Balance Models).  
+\item Chapter 12 of Bear, Hydraulics of Groundwater.  The chapter is about LP application to groundwater management.  
+\item Chapter 17 of Practical Computational Hydraulics in \textbf{R} (the URL is listed below).  The chapter explains how to build a functioning groundwater model using \textbf{R}\footnote{The reading is located at \url{http://www.rtfmps.com/university-courses/ce4333-PCHinR/3-Readings/PCHinR-LectureNotes/PCHinR.pdf}}. 
+\end{enumerate}
+\item Use the readings and build a groundwater model to compute the influence matrix that is needed for the linear program model to replicate Example 2 on page 505 of Chapter 12 in Bear.\footnote{You can build the necessary groundwater model using \textbf{R}, \texttt{MODFLOW}, or even Excel -- steady flow, single layer models are straightforward.  A spreadsheet model that could be adapted (need to add recharge and wells) for this exercise is located at
+\url{http://theodores-pro.ttu.edu/software-archive/spreadsheets/ssgwhydro/}}
+\item Once the groundwater model is built and running, use it to generate influence coefficients to replicate Example 2 on page 505 of Chapter 12 in Bear.  Use \texttt{lpSolve} tool in \textbf{R} to find the water allocations.
+\item Prepare a report that documents the entire analysis, including construction of the groundwater model to compute the influence coefficients and the LP model to perform the allocation.  Produce three allocations for the case where recharge is 100 mm/yr (original problem), 50mm/yr (a drought condition), 150mm/yr (a case where global climate change has increased average rainfall).
+\end{enumerate}
+
+
+\end{document}
+
+

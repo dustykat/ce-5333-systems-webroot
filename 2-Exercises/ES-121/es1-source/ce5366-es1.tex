@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+% REVISION NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2008-0814 Location, Date, Time
+% 2008-0814 fixed citations -- added bibliography.
+%
+%
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+%\geometry{landscape}                
+\usepackage[parfill]{parskip}    
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage[final]{pdfpages}
+\usepackage{paralist} 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5366}
+\rhead{FALL 2018}
+\lfoot{CE 5366 -- Cleveland}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{REVISION 1}
+\renewcommand\headrulewidth{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5366 -- Water Resources Management}  {Exercise Set 1}}}
+\end{center}
+\begingroup
+\begin{tabular}{p{1in} p{5in}}
+Purpose: & Uncertainty and the impact of subtle changes in consequences and costs on the decision making. Critical thinking. \\
+\end{tabular}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\small{Exercise}}
+\begin{enumerate}
+\item Look up the term ``expected value'' in the actuarial and/or financial context.
+\item Consider a decision (action) with the properties below \\ ~\\
+\begin{tabular}{cll}
+Action & Outcome & Probability \\
+\hline
+\hline
+A & 200,000 live; 400,000 die & 100\% \\
+B & 198,000 live; 402,000 die & 100\% \\
+\end{tabular}\\~\\
+Compute the expected value of the number of lives in each alternative.
+Suppose the decision makers goal is to maximize the expected value of number of lives.
+Suppose the ``cost'' to implement either action is identical.
+Which action would you choose? Why?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider a decision (action) with the properties below \\ ~\\
+\begin{tabular}{cll}
+Action & Outcome & Probability \\
+\hline
+\hline
+A & 200,000 live; 400,000 die & 100\% \\
+B & 600,000 live; 0 die & 33\% \\
+~ & 0 live; 600,000 die & 66\% \\
+\end{tabular}\\~\\
+Compute the expected value of the number of lives in each alternative.
+Suppose the decision makers goal is to maximize the expected value of number of lives.
+Suppose the ``cost'' to implement either action is identical.
+Which action would you choose? Why?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider a decision (action) with the properties below \\ ~\\
+\begin{tabular}{cll}
+Action & Outcome & Probability \\
+\hline
+\hline
+A & 200,000 live; 400,000 die & 100\% \\
+B & 600,000 live; 0 die & 33.3335\% \\
+~ & 0 live; 600,000 die & 65.6665\% \\
+\end{tabular}\\~\\
+Compute the expected value of the number of lives in each alternative.
+Suppose the decision makers goal is to maximize the expected value of number of lives.
+Suppose the ``cost'' to implement either action is identical.
+Which action would you choose? Why?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider a decision (action) with the properties below \\ ~\\
+\begin{tabular}{cll}
+Action & Outcome & Probability \\
+\hline
+\hline
+A & 200,000 live; 400,000 die & 100\% \\
+B & 198,000 live; 402,000 die & 100\% \\
+\end{tabular}\\~\\
+Compute the expected value of the number of lives in each alternative.
+Suppose the decision makers goal is to maximize the expected value of number of lives.
+Suppose the ``cost'' to implement action A has a cost, equivalent to two thousand premature deaths within one year of the action.
+Which action would you choose? Why?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider a decision (action) with the properties below \\ ~\\
+\begin{tabular}{cll}
+Action & Outcome & Probability \\
+\hline
+\hline
+A & 200,000 live; 400,000 die & 100\% \\
+B & 198,000 live; 402,000 die & 100\% \\
+\end{tabular}\\~\\
+Compute the expected value of the number of lives in each alternative.
+Suppose the decision makers goal is to maximize the expected value of number of lives.
+Suppose the ``cost'' to implement action A has a cost, equivalent to two thousand premature deaths within ten years of the action.
+Which action would you choose? Why?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Did ``cost'' have an effect on \textbf{your} decision?   
+\item Did the timing of the cost have an effect on \textbf{your} decision?   
+\item Look up the term ``triage'' as it is applied to military (battlefield) medicine.  How might this concept apply in the cases above? 
+\end{enumerate}
+
+
+\end{document}
+
+
