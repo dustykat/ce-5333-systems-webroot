@@ -1,0 +1,220 @@
+\contentsline {section}{\numberline {1}Introduction}{11}
+\contentsline {subsection}{\numberline {1.1}Goals and Objectives of Water Resources Management}{11}
+\contentsline {subsubsection}{\numberline {1.1.1}Example}{11}
+\contentsline {subsection}{\numberline {1.2}Decision Making}{11}
+\contentsline {subsubsection}{\numberline {1.2.1}Example}{11}
+\contentsline {subsection}{\numberline {1.3}Assigning Value}{11}
+\contentsline {subsubsection}{\numberline {1.3.1}Example}{11}
+\contentsline {subsection}{\numberline {1.4}Readings}{11}
+\contentsline {subsection}{\numberline {1.5}Exercises}{11}
+\contentsline {section}{\numberline {2}Engineering Economy}{12}
+\contentsline {subsection}{\numberline {2.1}Time Value of Money}{12}
+\contentsline {subsubsection}{\numberline {2.1.1}Example}{12}
+\contentsline {subsection}{\numberline {2.2}Comparing Alternatives}{12}
+\contentsline {subsubsection}{\numberline {2.2.1}Example}{12}
+\contentsline {subsection}{\numberline {2.3}Perspective}{12}
+\contentsline {subsubsection}{\numberline {2.3.1}Example}{12}
+\contentsline {subsection}{\numberline {2.4}Readings}{12}
+\contentsline {subsection}{\numberline {2.5}Exercises}{12}
+\contentsline {section}{\numberline {3}Title}{13}
+\contentsline {subsection}{\numberline {3.1}Topic 1}{13}
+\contentsline {subsubsection}{\numberline {3.1.1}Example}{13}
+\contentsline {subsection}{\numberline {3.2}Topic 2}{13}
+\contentsline {subsubsection}{\numberline {3.2.1}Example}{13}
+\contentsline {subsection}{\numberline {3.3}Topic 3}{13}
+\contentsline {subsubsection}{\numberline {3.3.1}Example}{13}
+\contentsline {subsection}{\numberline {3.4}Readings}{13}
+\contentsline {subsection}{\numberline {3.5}Exercises}{13}
+\contentsline {section}{\numberline {4}Title}{14}
+\contentsline {subsection}{\numberline {4.1}Topic 1}{14}
+\contentsline {subsubsection}{\numberline {4.1.1}Example}{14}
+\contentsline {subsection}{\numberline {4.2}Topic 2}{14}
+\contentsline {subsubsection}{\numberline {4.2.1}Example}{14}
+\contentsline {subsection}{\numberline {4.3}Topic 3}{14}
+\contentsline {subsubsection}{\numberline {4.3.1}Example}{14}
+\contentsline {subsection}{\numberline {4.4}Readings}{14}
+\contentsline {subsection}{\numberline {4.5}Exercises}{14}
+\contentsline {section}{\numberline {5}Title}{15}
+\contentsline {subsection}{\numberline {5.1}Topic 1}{15}
+\contentsline {subsubsection}{\numberline {5.1.1}Example}{15}
+\contentsline {subsection}{\numberline {5.2}Topic 2}{15}
+\contentsline {subsubsection}{\numberline {5.2.1}Example}{15}
+\contentsline {subsection}{\numberline {5.3}Topic 3}{15}
+\contentsline {subsubsection}{\numberline {5.3.1}Example}{15}
+\contentsline {subsection}{\numberline {5.4}Readings}{15}
+\contentsline {subsection}{\numberline {5.5}Exercises}{15}
+\contentsline {section}{\numberline {6}Title}{16}
+\contentsline {subsection}{\numberline {6.1}Topic 1}{16}
+\contentsline {subsubsection}{\numberline {6.1.1}Example}{16}
+\contentsline {subsection}{\numberline {6.2}Topic 2}{16}
+\contentsline {subsubsection}{\numberline {6.2.1}Example}{16}
+\contentsline {subsection}{\numberline {6.3}Topic 3}{16}
+\contentsline {subsubsection}{\numberline {6.3.1}Example}{16}
+\contentsline {subsection}{\numberline {6.4}Readings}{16}
+\contentsline {subsection}{\numberline {6.5}Exercises}{16}
+\contentsline {section}{\numberline {7}Title}{17}
+\contentsline {subsection}{\numberline {7.1}Topic 1}{17}
+\contentsline {subsubsection}{\numberline {7.1.1}Example}{17}
+\contentsline {subsection}{\numberline {7.2}Topic 2}{17}
+\contentsline {subsubsection}{\numberline {7.2.1}Example}{17}
+\contentsline {subsection}{\numberline {7.3}Topic 3}{17}
+\contentsline {subsubsection}{\numberline {7.3.1}Example}{17}
+\contentsline {subsection}{\numberline {7.4}Readings}{17}
+\contentsline {subsection}{\numberline {7.5}Exercises}{17}
+\contentsline {section}{\numberline {8}Linear Programming}{18}
+\contentsline {subsection}{\numberline {8.1}Overview of LP as a Decision Support Tool}{18}
+\contentsline {subsubsection}{\numberline {8.1.1}Example}{18}
+\contentsline {subsection}{\numberline {8.2}Primal-Dual Relationship}{18}
+\contentsline {subsubsection}{\numberline {8.2.1}Example}{18}
+\contentsline {subsection}{\numberline {8.3}Interpreting Results}{18}
+\contentsline {subsubsection}{\numberline {8.3.1}Example}{18}
+\contentsline {subsection}{\numberline {8.4}Readings}{18}
+\contentsline {subsection}{\numberline {8.5}Exercises}{18}
+\contentsline {section}{\numberline {9}Solving Linear Programs in \textbf {R}}{19}
+\contentsline {subsection}{\numberline {9.1}Installing \texttt {lpSolve} package}{19}
+\contentsline {subsubsection}{\numberline {9.1.1}Example}{19}
+\contentsline {subsection}{\numberline {9.2}Solving a LP using \texttt {lpSolve}}{19}
+\contentsline {subsubsection}{\numberline {9.2.1}Example}{19}
+\contentsline {subsection}{\numberline {9.3}Interpreting Results}{19}
+\contentsline {subsubsection}{\numberline {9.3.1}Example}{19}
+\contentsline {subsection}{\numberline {9.4}Readings}{19}
+\contentsline {subsection}{\numberline {9.5}Exercises}{19}
+\contentsline {section}{\numberline {10}Groundwater Simulation-Optimization}{20}
+\contentsline {subsection}{\numberline {10.1}Technological Functions}{20}
+\contentsline {subsubsection}{\numberline {10.1.1}Example}{20}
+\contentsline {subsection}{\numberline {10.2}Groundwater Hydraulics Model to Build the Influence Coefficients}{20}
+\contentsline {subsubsection}{\numberline {10.2.1}Example}{20}
+\contentsline {subsection}{\numberline {10.3}The LP Framework and Soluion}{20}
+\contentsline {subsubsection}{\numberline {10.3.1}Example}{20}
+\contentsline {subsection}{\numberline {10.4}Readings}{20}
+\contentsline {subsection}{\numberline {10.5}Exercises}{20}
+\contentsline {section}{\numberline {11}Supply Allocation under Uncertainty - Multi-Stage Approach}{21}
+\contentsline {subsection}{\numberline {11.1}Multi-Stage LP Allocation Example}{21}
+\contentsline {subsection}{\numberline {11.2}Linear Programming Model Framework}{22}
+\contentsline {subsubsection}{\numberline {11.2.1}Approximating the Random Variable}{22}
+\contentsline {subsubsection}{\numberline {11.2.2}Technological and Probability Values}{24}
+\contentsline {subsection}{\numberline {11.3}Linear Programming Model Solution}{25}
+\contentsline {subsection}{\numberline {11.4}Readings}{27}
+\contentsline {subsection}{\numberline {11.5}Exercises}{27}
+\contentsline {section}{\numberline {12}Supply Allocation under Uncertainty - Chance-Constraint Approach}{29}
+\contentsline {subsection}{\numberline {12.1}Chance-Constraints}{29}
+\contentsline {subsubsection}{\numberline {12.1.1}Example}{29}
+\contentsline {subsection}{\numberline {12.2}Approximating the Random Variable}{30}
+\contentsline {subsection}{\numberline {12.3}The LP Framework and Solution}{30}
+\contentsline {subsection}{\numberline {12.4}Readings}{32}
+\contentsline {subsection}{\numberline {12.5}Exercises}{32}
+\contentsline {section}{\numberline {13}Waste Load Allocation}{34}
+\contentsline {subsection}{\numberline {13.1}Water Quality Technological Functions}{34}
+\contentsline {subsubsection}{\numberline {13.1.1}Example}{34}
+\contentsline {subsection}{\numberline {13.2}Simulation-Optimization}{34}
+\contentsline {subsubsection}{\numberline {13.2.1}Example}{34}
+\contentsline {subsection}{\numberline {13.3}Topic 3}{34}
+\contentsline {subsubsection}{\numberline {13.3.1}Example}{34}
+\contentsline {subsection}{\numberline {13.4}Readings}{34}
+\contentsline {subsection}{\numberline {13.5}Exercises}{34}
+\contentsline {section}{\numberline {14}Constrained Non-Linear Programming}{35}
+\contentsline {subsection}{\numberline {14.1}Topic 1}{35}
+\contentsline {subsubsection}{\numberline {14.1.1}Example}{35}
+\contentsline {subsection}{\numberline {14.2}Topic 2}{35}
+\contentsline {subsubsection}{\numberline {14.2.1}Example}{35}
+\contentsline {subsection}{\numberline {14.3}Topic 3}{35}
+\contentsline {subsubsection}{\numberline {14.3.1}Example}{35}
+\contentsline {subsection}{\numberline {14.4}Readings}{35}
+\contentsline {subsection}{\numberline {14.5}Exercises}{35}
+\contentsline {section}{\numberline {15}Solving constrained Non-Linear programs in \textbf {R}}{36}
+\contentsline {subsection}{\numberline {15.1}Packages }{36}
+\contentsline {subsubsection}{\numberline {15.1.1}Example 1}{37}
+\contentsline {subsubsection}{\numberline {15.1.2}Example 2}{39}
+\contentsline {subsection}{\numberline {15.2}Topic 2 : Water Resources Allocation/Operation Problem}{40}
+\contentsline {subsubsection}{\numberline {15.2.1}Example: Water Delivery Price Structure}{40}
+\contentsline {subsection}{\numberline {15.3}Topic 3: Water Quality Allocation Problem}{42}
+\contentsline {subsubsection}{\numberline {15.3.1}Example: Reactor-Tank System}{42}
+\contentsline {subsection}{\numberline {15.4}Topic 4 : Extending the Toolkit -- Using numerical derivatives to construct gradients and Jacobians}{47}
+\contentsline {subsubsection}{\numberline {15.4.1}Example 2A Numerical Gradient and Jacobian}{47}
+\contentsline {subsection}{\numberline {15.5}Topic 5: Water Resources Allocation/Operation Problem}{50}
+\contentsline {subsubsection}{\numberline {15.5.1}Example}{50}
+\contentsline {subsection}{\numberline {15.6}Topic 6: Water Quality Allocation Problem}{50}
+\contentsline {subsubsection}{\numberline {15.6.1}Example}{50}
+\contentsline {subsection}{\numberline {15.7}Readings}{50}
+\contentsline {subsection}{\numberline {15.8}Exercises}{51}
+\contentsline {section}{\numberline {16}Title}{52}
+\contentsline {subsection}{\numberline {16.1}Topic 1}{52}
+\contentsline {subsubsection}{\numberline {16.1.1}Example}{52}
+\contentsline {subsection}{\numberline {16.2}Topic 2}{52}
+\contentsline {subsubsection}{\numberline {16.2.1}Example}{52}
+\contentsline {subsection}{\numberline {16.3}Topic 3}{52}
+\contentsline {subsubsection}{\numberline {16.3.1}Example}{52}
+\contentsline {subsection}{\numberline {16.4}Readings}{52}
+\contentsline {subsection}{\numberline {16.5}Exercises}{52}
+\contentsline {section}{\numberline {17}Title}{53}
+\contentsline {subsection}{\numberline {17.1}Topic 1}{53}
+\contentsline {subsubsection}{\numberline {17.1.1}Example}{53}
+\contentsline {subsection}{\numberline {17.2}Topic 2}{53}
+\contentsline {subsubsection}{\numberline {17.2.1}Example}{53}
+\contentsline {subsection}{\numberline {17.3}Topic 3}{53}
+\contentsline {subsubsection}{\numberline {17.3.1}Example}{53}
+\contentsline {subsection}{\numberline {17.4}Readings}{53}
+\contentsline {subsection}{\numberline {17.5}Exercises}{53}
+\contentsline {section}{\numberline {18}Title}{54}
+\contentsline {subsection}{\numberline {18.1}Topic 1}{54}
+\contentsline {subsubsection}{\numberline {18.1.1}Example}{54}
+\contentsline {subsection}{\numberline {18.2}Topic 2}{54}
+\contentsline {subsubsection}{\numberline {18.2.1}Example}{54}
+\contentsline {subsection}{\numberline {18.3}Topic 3}{54}
+\contentsline {subsubsection}{\numberline {18.3.1}Example}{54}
+\contentsline {subsection}{\numberline {18.4}Readings}{54}
+\contentsline {subsection}{\numberline {18.5}Exercises}{54}
+\contentsline {section}{\numberline {19}Title}{55}
+\contentsline {subsection}{\numberline {19.1}Topic 1}{55}
+\contentsline {subsubsection}{\numberline {19.1.1}Example}{55}
+\contentsline {subsection}{\numberline {19.2}Topic 2}{55}
+\contentsline {subsubsection}{\numberline {19.2.1}Example}{55}
+\contentsline {subsection}{\numberline {19.3}Topic 3}{55}
+\contentsline {subsubsection}{\numberline {19.3.1}Example}{55}
+\contentsline {subsection}{\numberline {19.4}Readings}{55}
+\contentsline {subsection}{\numberline {19.5}Exercises}{55}
+\contentsline {section}{\numberline {20}Title}{56}
+\contentsline {subsection}{\numberline {20.1}Topic 1}{56}
+\contentsline {subsubsection}{\numberline {20.1.1}Example}{56}
+\contentsline {subsection}{\numberline {20.2}Topic 2}{56}
+\contentsline {subsubsection}{\numberline {20.2.1}Example}{56}
+\contentsline {subsection}{\numberline {20.3}Topic 3}{56}
+\contentsline {subsubsection}{\numberline {20.3.1}Example}{56}
+\contentsline {subsection}{\numberline {20.4}Readings}{56}
+\contentsline {subsection}{\numberline {20.5}Exercises}{56}
+\contentsline {section}{\numberline {21}Title}{57}
+\contentsline {subsection}{\numberline {21.1}Topic 1}{57}
+\contentsline {subsubsection}{\numberline {21.1.1}Example}{57}
+\contentsline {subsection}{\numberline {21.2}Topic 2}{57}
+\contentsline {subsubsection}{\numberline {21.2.1}Example}{57}
+\contentsline {subsection}{\numberline {21.3}Topic 3}{57}
+\contentsline {subsubsection}{\numberline {21.3.1}Example}{57}
+\contentsline {subsection}{\numberline {21.4}Readings}{57}
+\contentsline {subsection}{\numberline {21.5}Exercises}{57}
+\contentsline {section}{\numberline {22}Title}{58}
+\contentsline {subsection}{\numberline {22.1}Topic 1}{58}
+\contentsline {subsubsection}{\numberline {22.1.1}Example}{58}
+\contentsline {subsection}{\numberline {22.2}Topic 2}{58}
+\contentsline {subsubsection}{\numberline {22.2.1}Example}{58}
+\contentsline {subsection}{\numberline {22.3}Topic 3}{58}
+\contentsline {subsubsection}{\numberline {22.3.1}Example}{58}
+\contentsline {subsection}{\numberline {22.4}Readings}{58}
+\contentsline {subsection}{\numberline {22.5}Exercises}{58}
+\contentsline {section}{\numberline {23}Title}{59}
+\contentsline {subsection}{\numberline {23.1}Topic 1}{59}
+\contentsline {subsubsection}{\numberline {23.1.1}Example}{59}
+\contentsline {subsection}{\numberline {23.2}Topic 2}{59}
+\contentsline {subsubsection}{\numberline {23.2.1}Example}{59}
+\contentsline {subsection}{\numberline {23.3}Topic 3}{59}
+\contentsline {subsubsection}{\numberline {23.3.1}Example}{59}
+\contentsline {subsection}{\numberline {23.4}Readings}{59}
+\contentsline {subsection}{\numberline {23.5}Exercises}{59}
+\contentsline {section}{\numberline {24}Title}{60}
+\contentsline {subsection}{\numberline {24.1}Topic 1}{60}
+\contentsline {subsubsection}{\numberline {24.1.1}Example}{60}
+\contentsline {subsection}{\numberline {24.2}Topic 2}{60}
+\contentsline {subsubsection}{\numberline {24.2.1}Example}{60}
+\contentsline {subsection}{\numberline {24.3}Topic 3}{60}
+\contentsline {subsubsection}{\numberline {24.3.1}Example}{60}
+\contentsline {subsection}{\numberline {24.4}Readings}{60}
+\contentsline {subsection}{\numberline {24.5}Exercises}{60}
