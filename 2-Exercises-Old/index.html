@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" >
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <a  href="../9-Announcements/">Announcements</a>
+            <a href="../0-Syllabus/ce5366.pdf">Syllabus</a>
+            <a href="../1-Lectures/">Lectures</a>
+            <a class="active" href="#">Exercises</a>
+            <a href="../3-Readings/">Readings</a>
+            <a href="../4-Toolkit/">Toolkit</a>
+
+        </div>
+        
+        <div style="padding-left:16px">
+            <h2>Lecture Switchboard</h2>
+            <p>Expand sections below by clicking the "+" sign to the right of the section for more detail about the section.   In each section are links to individual lectures. </p>
+        </div>
+        
+        
+
+        <button class="accordion"> Economic theory and applications in analysis and management of water resources; application of price theory to allocation of water and related renewable resources; benefit-cost analysis with applications to water resources. <br><br>(Exercises 1-4) </button>
+        <div class="panel">
+            <div class="content-columns">
+                <div class="content-column-left">
+                    <p><a href="./ES-1/"> ES-1 </a> Water Law </p>
+                    <p><a href="./ES-2/"> ES-2 </a> Economics </p>
+                </div>
+                <div class="content-column-right">
+                    <p><a href="./ES-3/"> ES-3 </a> Benefit/Cost Analysis </p>
+                    <p><a href="./ES-4/"> ES-4 </a> Optimal Resource Allocation </p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="accordion">Simulation techniques for water resource systems. River basin models. Groundwater basin models. Water quality models. <br><br> (Exercises 5-8) </button>
+        <div class="panel">
+            <div class="content-columns">
+                <div class="content-column-left">
+                    <p><a href="./ES-5/"> ES-5 </a> River Flow Simulation </p>
+                    <p><a href="./ES-6/"> ES-6 </a> Groundwater Basin Flow Simulation </p>
+                </div>
+                <div class="content-column-right">
+                    <p><a href="./ES-7/"> ES-7 </a> Dissolved O2 Simulation </p>
+                    <p><a href="./ES-8/"> ES-8 </a> Groundwater Quality Simulation </p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="accordion">Application of mathematical programming techniques to water resource systems. Reservoir management and operation, optimal timing, sequencing and sizing of water resources projects, and multiobjective planning and conjunctive use of surface water and groundwater. <br><br>(Exercises 9-12) </button>
+        <div class="panel">
+            <div class="content-columns">
+                <div class="content-column-left">
+                    <p><a href="./ES-9/">  ES-9 </a> LP and NLP  </p>
+                    <p><a href="./ES-10/"> ES-10 </a> Chance Constrained LP for Reservoir Operation </p>
+                </div>
+                <div class="content-column-right">
+                    <p><a href="./ES-11/"> ES-11 </a> LP for Groundwater Pumping </p>
+                    <p><a href="./ES-12/"> ES-12 </a> Grid Search for Flood Control, Varying Climate </p>
+                </div>
+            </div>
+        </div>
+<!-- JavaScripts for this page -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        }
+    }
+</script>
+
+    </body>
+</html>
