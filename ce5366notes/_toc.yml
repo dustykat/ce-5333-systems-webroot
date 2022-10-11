@@ -9,6 +9,10 @@ chapters:
 - file: chapters/economics/economics
   sections:
   - file: chapters/economics/policyoverride
+
+- file: chapters/simulation/simulation
+
+- file: chapters/optimization/optimization
   
 - file: chapters/decisionSupportbyLP/linearprograms
 
