@@ -3,7 +3,7 @@
 
 title: Water Resources Management
 author: Theodore G. Cleveland, Ph.D., P.E., M.ASCE, F.EWRI.
-logo: logo.png
+logo: WRMlogo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
