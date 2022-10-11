@@ -10,3 +10,7 @@ chapters:
   sections:
   - file: chapters/economics/policyoverride
   
+- file: chapters/decisionSupportbyLP/linearprograms
+
+- file: chapters/decisionSupportbyNLP/nonlinearprograms
+  
