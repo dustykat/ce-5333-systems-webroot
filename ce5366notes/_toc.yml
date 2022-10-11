@@ -13,4 +13,8 @@ chapters:
 - file: chapters/decisionSupportbyLP/linearprograms
 
 - file: chapters/decisionSupportbyNLP/nonlinearprograms
+
+- file: chapters/watersupplyallocation/watersupplyallocation
+
+- file: chapters/waterqualityallocation/waterqualityallocation
   
