@@ -5,6 +5,8 @@ format: jb-book
 root: intro
 chapters:
 - file: chapters/introduction/introduction
+  sections:
+  - file: chapters/introduction/resourcesallocation
 
 - file: chapters/economics/economics
   sections:
