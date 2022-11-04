@@ -94,17 +94,29 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../introduction/introduction.html">
    Introduction
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/resourcesallocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../economics/economics.html">
    Economics as a Decision Support Structure
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -245,6 +257,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-using-scipy">
+   Example using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     scipy
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -255,6 +290,71 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="linear-programming-for-decision-support">
 <h1>Linear Programming for Decision Support<a class="headerlink" href="#linear-programming-for-decision-support" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-using-scipy">
+<h2>Example using <code class="docutils literal notranslate"><span class="pre">scipy</span></code><a class="headerlink" href="#example-using-scipy" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">linprog</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">lhs_ineq</span> <span class="o">=</span> <span class="p">[[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>  <span class="c1"># Red constraint left side</span>
+<span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span>  <span class="c1"># Blue constraint left side</span>
+<span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]]</span>  <span class="c1"># Yellow constraint left side</span>
+
+<span class="n">rhs_ineq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span>  <span class="c1"># Red constraint right side</span>
+<span class="mi">10</span><span class="p">,</span>  <span class="c1"># Blue constraint right side</span>
+<span class="mi">2</span><span class="p">]</span>  <span class="c1"># Yellow constraint right side</span>
+
+<span class="n">lhs_eq</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>  <span class="c1"># Green constraint left side</span>
+<span class="n">rhs_eq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">]</span>       <span class="c1"># Green constraint right side</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bnd</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span>  <span class="c1"># Bounds of x</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))]</span>  <span class="c1"># Bounds of y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">opt</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">lhs_ineq</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">rhs_ineq</span><span class="p">,</span>
+<span class="o">...</span>               <span class="n">A_eq</span><span class="o">=</span><span class="n">lhs_eq</span><span class="p">,</span> <span class="n">b_eq</span><span class="o">=</span><span class="n">rhs_eq</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bnd</span><span class="p">,</span>
+<span class="o">...</span>               <span class="n">method</span><span class="o">=</span><span class="s2">&quot;revised simplex&quot;</span><span class="p">)</span>
+<span class="n">opt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     con: array([1.77635684e-15])
+     fun: -16.818181818181817
+ message: &#39;Optimization terminated successfully.&#39;
+     nit: 3
+   slack: array([ 0.        , 18.18181818,  3.36363636])
+  status: 0
+ success: True
+       x: array([7.72727273, 4.54545455])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://realpython.com/linear-programming-python/">Mirko Stojiljković (2020) Hands-On Linear Programming: Optimization With Python. Real Python (Blog Post)</a></p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html">scipy.optimize.linprog (Documentation)</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/linear-programming-using-python-priyansh-22b5ee888fe0">Priyansh Soni (2020) Linear Programming using Python. Towards Data Science (Blog Post)</a></p></li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
