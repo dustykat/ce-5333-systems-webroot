@@ -23,4 +23,5 @@ chapters:
 - file: chapters/watersupplyallocation/watersupplyallocation
 
 - file: chapters/waterqualityallocation/waterqualityallocation
-  
+  sections:
+  - file: chapters/waterqualityallocation/reactortank
