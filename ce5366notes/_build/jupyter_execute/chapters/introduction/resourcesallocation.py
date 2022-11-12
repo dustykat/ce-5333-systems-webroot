@@ -5,7 +5,7 @@
 # 
 # The prime focus (of this class) is water resources management, although I suspect the principles extend beyond that realm. 
 # Water resources management is the activity of planning, developing, distributing and managing the optimum use of water resources. 
-# Water resource management planning considers the competing demands for/on water (quantity, quality, location, and timing), and seeks to allocate water on an equitable basis to satisfy all uses and demands
+# Water resource management planning considers the competing demands for/on water (quantity, quality, location, and timing), and seeks to allocate a scarce resource (water) on an equitable basis to satisfy all uses and demands
 # 
 # Consider the meanings of **allocate**
 # 
