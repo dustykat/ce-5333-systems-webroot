@@ -9,7 +9,7 @@ Many (but not all) underlined/bold items are working hyperlinks to the resource.
 :::
 
 ## Syllabus
-The syllabus is located at [ce-5366-2023-1-syllabus](http://54.243.252.9/ce-5333-systems-webroot/0-Syllabus/ce5333-Syllabus.html).
+The syllabus is located at [ce-5366-2023-1-syllabus](http://54.243.252.9/ce-5333-systems-webroot/0-Syllabus/ce-5366-2023-1-Syllabus.html).
 
 ## Other resources
 Other resources are located in the various parts of the notes, and also within blackboard.
