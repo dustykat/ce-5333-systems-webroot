@@ -75,6 +75,12 @@
 # 
 # ### Integrated Models
 
+# ## References
+# 
+# 1. [WRSPM pp. 39-55](http://54.243.252.9/ce-5333-systems-webroot/3-Readings/WaterResourcesSystemsPlanningManagement/WaterResourcesText.pdf) 
+# 2. [Loucks, Stedenger, Haith (1981) Water Resources Systems Planning and Analysis p. 8](http://54.243.252.9/ce-5333-systems-webroot/3-Readings/SystemsCharacteristics/SystemsCharacteristics1.pdf) 
+# 3. [Loucks, Stedenger, Haith (1981) Water Resources Systems Planning and Analysis p. 9](http://54.243.252.9/ce-5333-systems-webroot/3-Readings/SystemsCharacteristics/SystemsCharacteristics2.pdf)
+
 # In[ ]:
 
 
