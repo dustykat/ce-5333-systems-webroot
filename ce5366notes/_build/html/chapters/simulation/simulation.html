@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Simulation Models for Decision Support &#8212; Water Resources Management</title>
+    <title>Modeling for Decision Support &#8212; Water Resources Management</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Welcome to your Jupyter Book
+                    Welcome to CE-5366 Water Resources Manglement
                 </a>
             </li>
         </ul>
@@ -150,7 +150,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Simulation Models for Decision Support
+   Modeling for Decision Support
   </a>
  </li>
  <li class="toctree-l1">
@@ -168,17 +168,29 @@ const thebe_selector_output = ".output, .cell_output"
    Non-Linear Programming for Decision Support
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../watersupplyallocation/watersupplyallocation.html">
    Water Supply Allocation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../watersupplyallocation/multistage.html">
+     Allocation under Uncertainty
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waterqualityallocation/waterqualityallocation.html">
    Water Quality Allocation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -374,23 +386,124 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-building-approach">
+   Model Building Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-models">
+   Simulation Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-model-types">
+   Useful Model Types:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hydraulic-models">
+     Hydraulic Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quality-models">
+     Quality Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cost-models">
+     Cost Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrated-models">
+     Integrated Models
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Simulation Models for Decision Support</h1>
+                <h1>Modeling for Decision Support</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-building-approach">
+   Model Building Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-models">
+   Simulation Models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-model-types">
+   Useful Model Types:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hydraulic-models">
+     Hydraulic Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quality-models">
+     Quality Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cost-models">
+     Cost Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrated-models">
+     Integrated Models
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -398,8 +511,88 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="simulation-models-for-decision-support">
-<h1>Simulation Models for Decision Support<a class="headerlink" href="#simulation-models-for-decision-support" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="modeling-for-decision-support">
+<h1>Modeling for Decision Support<a class="headerlink" href="#modeling-for-decision-support" title="Permalink to this headline">#</a></h1>
+<p>Design and management decisions that are made about environmental and water resources systems, are based on what the decision-makers believe will take place as a result of their decisions.
+These predictions are either based on very qualitative informa-
+tion or, at least in part, on quantitative information provided by an analog (mouse model for drug toxicity; column study for pollutant transport; …), and/or mathematical (computer-based) models.
+These quantitative mathematical models are considered essential for carrying out environmental impact assessments.
+Mathematical simulation and optimization models packaged within interactive computer programs provide a common way
+for planners and managers to predict the behaviour of any proposed water resources system design or management policy before it is implemented</p>
+<p>Modelling provides the principal way of predicting the behaviour of proposed infrastructural designs or management policies. The past thirty years have witnessed major advances in our abilities to model the engineering, economic, ecological, hydrological and sometimes even the institutional or political impacts of large, complex, multipurpose water resources systems. Appli-
+cations of models to real systems improves understanding, and contributes to improved system design, management and operation.</p>
+<p>Problems motivating modelling and analyses exhibit a number of common characteristics:</p>
+<blockquote>
+<div><p>A systems focus or orientation. In such situations atten-
+tion needs to be devoted to the interdependencies and
+interactions of elements within the system as a whole,
+as well as to the elements themselves.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The use of interdisciplinary teams. In many complex and non-traditional problems it is not at all clear from the start what disciplinary viewpoints will turn out to be most appropriate or acceptable. It is essential that participants in such work – coming from different established disciplines – become familiar with the
+techniques, vocabulary and concepts of the other
+disciplines involved. Participation in interdisciplinary
+modelling often requires a willingness to make mistakes at the fringes of one’s technical competence and
+to accept less than the latest advances in one’s own
+discipline.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The use of formal mathematics. Most analysts prefer
+to use mathematical models to assist in system
+description and the identification and evaluation of
+efficient tradeoffs among conflicting objectives, and to
+provide an unambiguous record of the assumptions
+and data used in the analysis.</p>
+</div></blockquote>
+<p>Not all water resources planning and management problems are suitable candidates for study using modelling
+methods. Modelling is most appropriate when:</p>
+<blockquote>
+<div><p>The planning and management objectives are reasonably well defined and organizations and individuals can be identified who can benefit from understanding the model results.</p>
+</div></blockquote>
+<blockquote>
+<div><p>There are many alternative decisions that may satisfy the stated objectives, and the best decision is not obvious.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The water resources system and the objectives being analysed are describable by reasonably tractable mathematical representations.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The information needed, such as the hydrological, economic, environmental and ecological impacts resulting from any decision, can be better estimated through the use of models.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The parameters of these models are estimable from readily obtainable data.</p>
+</div></blockquote>
+<section id="model-building-approach">
+<h2>Model Building Approach<a class="headerlink" href="#model-building-approach" title="Permalink to this headline">#</a></h2>
+<p>The modeling approach distilled into a protocol (vaguely reminiscent of the scientific method) is summarized as:</p>
+<ol class="simple">
+<li><p>Identify the information the model is to provide. This includes criteria or measures of system performance that are of interest to stakeholders. These criteria or measures are defined as functions of the behaviour or state of the system being modelled.</p></li>
+<li><p>Model the behaviour so the state of the system associated with any ‘external’ inputs can be predicted. This requires modelling the physical, chemical, biological, economic, ecological and social processes that take place, as applicable, in the represented system.</p></li>
+<li><p>Integrate these two parts along with some means of entering the ‘external’ inputs and obtaining in meaningful ways the outputs.</p></li>
+<li><p>Calibrate and verify or validate.</p></li>
+<li><p>Apply the model to produce the information desired.</p></li>
+</ol>
+<p>There is a fair amount of effort in the steps above, and a lot of art. But even using software for a specific situation involves these steps in some sense.</p>
+</section>
+<section id="simulation-models">
+<h2>Simulation Models<a class="headerlink" href="#simulation-models" title="Permalink to this headline">#</a></h2>
+<p>Simulation models address “what if” questions: What will likely happen over time and at one or more specific places if a particular design and/or operating policy is implemented?</p>
+<p>Simulation works well when there are only a relatively few alternatives to be evaluated, not when there are a large number of them. The trial and error process of simulation is time consuming. An important role of optimization methods is to reduce the number of alternatives for simulation analyses. However, if only one method of analysis is to be used to evaluate a complex water resources system, simulation together with human judgement concerning which alternatives to simulate is often, and rightly so, the method of choice.</p>
+</section>
+<section id="useful-model-types">
+<h2>Useful Model Types:<a class="headerlink" href="#useful-model-types" title="Permalink to this headline">#</a></h2>
+<section id="hydraulic-models">
+<h3>Hydraulic Models<a class="headerlink" href="#hydraulic-models" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="quality-models">
+<h3>Quality Models<a class="headerlink" href="#quality-models" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="cost-models">
+<h3>Cost Models<a class="headerlink" href="#cost-models" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="integrated-models">
+<h3>Integrated Models<a class="headerlink" href="#integrated-models" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
