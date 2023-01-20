@@ -77,5 +77,7 @@
 # 1. Faulconbridge, Ian. Introduction to Systems Engineering (Kindle Location 181). Argos Press Pty Ltd. Kindle Edition.
 # 
 # 2. Frank, M. (2002), “What is “engineering systems thinking”?”, Kybernetes, Vol. 31 No. 9/10, pp. 1350-1360. https://doi.org/10.1108/03684920210443554
+# 
+# 3. [Cleveland, T. G. (2017) *RESOURCE ALLOCATION Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture02/notes/ce5333-lecture2.pdf)
 
 # 

@@ -50,17 +50,31 @@
 # Notice the cash flow diagram looks the same – it is a tool to move values along the time axis. All other diagrams can be determined by combinations of these two concepts.
 # 
 # >Can either apply algebra to make the combinations, or just use simple computer programming (e.g. R)
+# 
 
 # ## Example
 # 
 # Determine the present worth (PV) of a stream of annual payments, each payment is \$100 for a period of 10 years. The discount rate is 3-percent per year.
 # 
 # - Sketch a cash flow diagram
+# 
+# ![](examplecashflow.png)
+# 
+# 
+# - Implement computations for year 0 to 10 (11 increments in total)
 
-# In[ ]:
+# In[1]:
 
 
+# cash flow calculations
+discount_rate = 0.03 # 3% interest rate
+payments = [0,100,100,100,100,100,100,100,100,100,100]
+present_value = [0 for i in range(11)] # empty list
+for i in range(0,11):
+    present_value[i] = payments[i]*(1+discount_rate)**(-i)
 
+#add up all the present values
+print("Present Worth of 10 annual payments of $100 @ 3% interest is $",round(sum(present_value),2))
 
 
 # ## Discounting Techniques
@@ -75,20 +89,8 @@
 # 
 # Each method produces the same evaluation of relative value
 
-# In[ ]:
-
-
-
-
-
 # ## References
 # 
-# 1.
+# 1. [Cleveland, T. G. (2017) *ECONOMIC ANALYSIS MATHEMATICS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture03/powerpoint/CE5366-Lesson-07.pdf)
 # 
-# 2. [Cleveland, T. G. (2017) *ECONOMIC ANALYSIS MATHEMATICS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture03/powerpoint/CE5366-Lesson-07.pdf)
-
-# In[ ]:
-
-
-
-
+# 2. [Cleveland, T. G. (2017) *BENEFIT-COST ANALYSIS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture04/powerpoint/CE5366-Lesson-08.pdf)
