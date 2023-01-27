@@ -95,4 +95,4 @@ print("Present Worth of 10 annual payments of $100 @ 3% interest is $",round(sum
 # 
 # 2. [Cleveland, T. G. (2017) *BENEFIT-COST ANALYSIS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture04/powerpoint/CE5366-Lesson-08.pdf)
 # 
-# 3. [Cleveland, T. G. (2019) *BENEFIT-COST ANALYSIS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture04/powerpoint/CE5366-Lesson-04.pdf)
+# 3. [Cleveland, T. G. (2019) *BENEFIT-COST ANALYSIS Notes to Accompany CE 5366 at TTU*](http://54.243.252.9/ce-5333-systems-webroot/1-Lectures/Lecture04/powerpoint/CE5366-Lecture-04.pdf)
