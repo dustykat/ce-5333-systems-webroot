@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+% REVISION NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2008-0814 Location, Date, Time
+% 2008-0814 fixed citations -- added bibliography.
+%
+%
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+%\geometry{landscape}                
+\usepackage[parfill]{parskip}    
+\usepackage{daves,fancyhdr,natbib,graphicx,dcolumn,amsmath,lastpage,url}
+\usepackage{amsmath,amssymb,epstopdf,longtable}
+\usepackage[final]{pdfpages}
+\usepackage{paralist} 
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\pagestyle{fancy}
+\lhead{CE 5366}
+\rhead{SPRING 2023}
+\lfoot{CE 5366 -- Cleveland}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\rfoot{REVISION NO. 2}
+\renewcommand\headrulewidth{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\textbf{{ CE 5366 -- Water Resources Management}  {Exercise Set 3}}}
+\end{center}
+\begingroup
+\begin{tabular}{p{1in} p{5in}}
+Purpose: & Practice engineering economic mathematics \\
+\end{tabular}
+\endgroup
+%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\small{Exercise}}
+\begin{enumerate}
+\item Two mutually exclusive project alternatives that provide identical service are described below: \\~\\
+\begin{tabular}{lrrrr}
+Project ID & Initial Cost & Annual O\&M & Salvage Value & Lifespan \\
+\hline
+\hline
+A & \$10,000 & \$2,000 & \$1,000 & 10  \\
+B & \$25,000 & \$1,500 & \$5,000 & 20  \\
+\end{tabular}\\~\\
+Assuming a discount rate of 5\% 
+\begin{enumerate}[a)]
+\item Which alternative has the lower annual cost?
+\item What is the incremental annual cost of going from the less to the more expensive alternative?
+\item Select the best alternative by the present-worth method.
+\item What is the rate of return on the incremental investment of B?
+\item What initial cost of replacing A after 10 years would make the two alternatives equivalent, assuming none of the other costs change?
+
+\end{enumerate}
+\end{enumerate}
+
+\clearpage
+\section*{\small{Example R Script}}
+An example in \textbf{R} is below.\footnote{You could use it as-is, if you have \textbf{R} installed; or easily convert into Python.  The exercise itself is simple enough to complete in Excel (or LibreOffice Spreadsheet, or Apple Numbers) choose your favorite poison here!}
+\begin{verbatim}
+# cash flow calculations for ES3
+rm(list=ls())
+discount_rate <- 0.05 # 3% interest rate
+# option A
+# compute present values of expenses first 10 years
+initial_costA <- 10000
+operationsA <- rep(2000,10)
+salvageA <- 1000
+### compute the PV of the operations cost
+present_value <- numeric(0)
+present_value <- 0
+for (i in 1:10){ #find present value of the i-th year payment
+  present_value[i] <- operationsA[i]*(1+discount_rate)^(-i)
+}
+operationsAPV <- sum(present_value)
+### compute the PV of the salvage payment
+salvageAPV <- salvageA*(1+discount_rate)^(-10)
+#print(cbind(initial_costA,operationsAPV,salvageAPV))
+# now compute the PV for the second 10 years
+presentValueA1 <- initial_costA+operationsAPV+salvageAPV
+presentValueA2 <- presentValueA1*(1+discount_rate)^(-10)
+presentValueA <- presentValueA1+presentValueA2
+message("Present Value A = $",presentValueA)
+########## Alternative B #################
+initial_costB <- 25000
+operationsB <- rep(1500,20)
+salvageB <- 5000
+### compute the PV of the operations cost
+present_value <- numeric(0)
+present_value <- 0
+for (i in 1:20){ #find present value of the i-th year payment
+  present_value[i] <- operationsB[i]*(1+discount_rate)^(-i)
+}
+operationsBPV <- sum(present_value)
+### compute the PV of the salvage payment
+salvageBPV <- salvageB*(1+discount_rate)^(-20)
+#print(cbind(initial_costB,operationsBPV,salvageBPV))
+presentValueB <- initial_costB+operationsBPV+salvageBPV
+message("Present Value B = $",presentValueB)
+# now convert both to annual costs
+### compute the PV of the operations cost
+present_valueA <- numeric(0)
+present_valueA <- 0
+### compute the PV of the operations cost
+present_valueB <- numeric(0)
+present_valueB <- 0
+## read in guess for annual cost
+  avA <- readline(prompt="Enter annual cost for alternative A: ")
+  avA <- as.numeric(avA)
+  avB <- readline(prompt="Enter annual cost for alternative B: ")
+  avB <- as.numeric(avB)
+#avA <- 3374.55
+#avB <- 3657.28
+annualA <- rep(avA,20)
+annualB <- rep(avB,20)
+for (i in 1:20){ #find present value of the i-th year payment
+  present_valueA[i] <- annualA[i]*(1+discount_rate)^(-i)
+  present_valueB[i] <- annualB[i]*(1+discount_rate)^(-i)
+}
+message("annual cost A = $",avA," PVA = $",sum(present_valueA)," PValue A = $",presentValueA)
+message("annual cost B = $",avB," PVB = $",sum(present_valueB)," PValue B = $",presentValueB)
+
+
+\end{verbatim}
+
+\end{document}
+
+
