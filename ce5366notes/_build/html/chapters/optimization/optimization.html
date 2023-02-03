@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Linear Programming for Decision Support" href="../decisionSupportbyLP/linearprograms.html" />
-    <link rel="prev" title="Simulation Models for Decision Support" href="../simulation/simulation.html" />
+    <link rel="next" title="Scheduling Example" href="1topic.html" />
+    <link rel="prev" title="Modeling for Decision Support" href="../simulation/simulation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -150,13 +152,35 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../simulation/simulation.html">
-   Simulation Models for Decision Support
+   Modeling for Decision Support
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Optimization Modeling for Decision Support
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1topic.html">
+     Scheduling Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2topic.html">
+     Grid Search Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3topic.html">
+     Gradient Descent Methods
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../decisionSupportbyLP/linearprograms.html">
@@ -172,8 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../watersupplyallocation/watersupplyallocation.html">
    Water Supply Allocation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -189,8 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../waterqualityallocation/waterqualityallocation.html">
    Water Quality Allocation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -386,12 +410,73 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-problem-characteristics">
+   Optimization Problem Characteristics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-optimization-jargon">
+   Useful Optimization Jargon
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optima">
+     Optima
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convex">
+     Convex
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concave">
+     Concave
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-optimum-values">
+     Global Optimum Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-optimal-values">
+     Local Optimal Values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -403,6 +488,56 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-problem-characteristics">
+   Optimization Problem Characteristics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-optimization-jargon">
+   Useful Optimization Jargon
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optima">
+     Optima
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convex">
+     Convex
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concave">
+     Concave
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-optimum-values">
+     Global Optimum Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-optimal-values">
+     Local Optimal Values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -412,6 +547,98 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="optimization-modeling-for-decision-support">
 <h1>Optimization Modeling for Decision Support<a class="headerlink" href="#optimization-modeling-for-decision-support" title="Permalink to this headline">#</a></h1>
+<p>Most engineering problems have multiple workable solutions (called feasible solutions).  Usually we apply some metric (measurement) of fitness (such as cost, weight, yield, <span class="math notranslate nohighlight">\(\dots\)</span> , or a linear or nonlinear combination of multiple measures) that distinguish one solution from another.  If a particular solution requires time-travel, that would be infeasible (circa 2022) and removed from consideration without bothering to determine its fitness in the other measures.</p>
+<p>The mathematical expression of fitness is called the <em>objective function</em> (also <em>merit function</em>, <em>cost function</em>, <em>performance function</em> are some other frequently appearing names for the same thing - a measure of how “good” the solution is!).  The supporting conditions, conservation laws, capacity restrictions, or other technical limitations that must be satisfied are called <em>constraints</em> (or <em>design requirements</em>, <em>feasibility conditions</em>, <em>auxiliary conditions</em>)</p>
+<p>When selecting an optimal solution (or non-inferior solution) we seek design values that minimize or maximize the <em>objective function</em> while simultaneously satisfying all the <em>constraints</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our least-squares regression analysis that led to the normal equations in line fitting is an example of an optimization problem.  The objective function was the SSE, the constraints were mostly that the <span class="math notranslate nohighlight">\(\beta_i\)</span>’s are real valued numbers.  This is an example of unconstrained optimization - a valuable subset of the overall optimization process.</p>
+</div>
+<p>For example, suppose we want to determine the lightest weight bridge that will satisfy a given set of design requirements.  The objective function is the bridge weight expressed in terms of the dimensions of the structural elements.  The constraints will be various force and moment relationships that must be satisfied (we want the bridge to actually work!). A typical problem is to determine the dimensions of the structural elements that will minimize the weight of the bridge, subject to the appliciable constraints.  Such problems are known as optimization problems and solutions are found using mathematical programming.</p>
+<p>Generally speaking solving linear and non-linear programming problems is relatively straightforward (given the right packages) but the formulation of the problem requires considerable care.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Recall in our problem solving process, the problem statement was a first step to success - in mathematical programming it is a vital step, and if done haphazardly the program will fail, when the actual problem has a solution. Development of the skill to deal with such an outcome is largely experience based - the abstraction process is also vital here.</p>
+</div>
+<section id="optimization-problem-characteristics">
+<h2>Optimization Problem Characteristics<a class="headerlink" href="#optimization-problem-characteristics" title="Permalink to this headline">#</a></h2>
+<p>An optimization problem is written using the following logic.</p>
+<p>Find values of the independent (<em>design, policy, or decision are other common names for these variables</em>) variables <span class="math notranslate nohighlight">\(x_1,x_2,\dots,x_n\)</span> that will minimize (or maximize) the objective function <span class="math notranslate nohighlight">\(y=f(x_1,x_2,\dots,x_n)\)</span>.</p>
+<p>The resulting solutions must also satisfy one or more constraint conditions usually expressed as equations or inequalities as:</p>
+<p><span class="math notranslate nohighlight">\(g_{eq;j}(x_1,x_2,\dots,x_n) = 0\)</span> <br>
+<span class="math notranslate nohighlight">\(g_{le;j}(x_1,x_2,\dots,x_n) \le 0\)</span> <br>
+<span class="math notranslate nohighlight">\(g_{ge;j}(x_1,x_2,\dots,x_n) \ge 0\)</span> <br></p>
+<p>for <span class="math notranslate nohighlight">\(j=1,2,\dots,m\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the total number of constraints.</p>
+<p>In addition, the permissible values of the independent variables are usually restricted to be non-negative as,</p>
+<p><span class="math notranslate nohighlight">\(x_i \ge 0~\text{for}~~i=1,2,\dots,n\)</span></p>
+<p>A further constraint, common in logistics problems is that the independent variables are integer.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Optimization problems that are integer constrained are difficult to solve elegantly.  Don’t be fooled into thinking that a real-valued solution rounded to the nearest integer is “optimal”; it might not even be feasible. It is a reasonable hack to get started, and often is a good enough approximation - just check that the result is at least feasible before commiting to the solution.</p>
+</div>
+</section>
+<section id="useful-optimization-jargon">
+<h2>Useful Optimization Jargon<a class="headerlink" href="#useful-optimization-jargon" title="Permalink to this headline">#</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
+<p>Functions map a relationship between input(s) and output(s)</p>
+<p>Functions can be of many types:</p>
+<ul class="simple">
+<li><p>Mathematical, logical, rule-based</p></li>
+<li><p>The mapping of inputs =&gt; outputs can be linear or nonlinear</p></li>
+<li><p>The function can be one-dimensional or multi-dimensional; the inputs can similarily be univariate (one dimension) or multivariate (many dimensions)</p></li>
+</ul>
+</section>
+<section id="optima">
+<h3>Optima<a class="headerlink" href="#optima" title="Permalink to this headline">#</a></h3>
+<p>Optimization means finding either a ‘maximum’ or a ‘minimum’ of a function. The optimum value is typically defined over a range of interest.</p>
+<figure align="center">
+<!--<img src="./convexplot.png" width="300" >-->
+<img src="http://54.243.252.9/ce-5319-webroot/ce5319jb/lessons/lesson10/optima.png" width="300" >
+<figcaption>Figure X: Optima of some function </figcaption>
+</figure>
+<p>A local maximum occurs when its value is higher than other values in the vicinity; A local minimum occurs when its value is lower than other values in the vicinity. The global maximum is the largest value in the range (a,b); The global minimum is the smallest value in the range (a,b).  A Saddle Point Occurs when the value of the function is higher on one side and lower on the other (the slope and curvature are zero at the point)</p>
+</section>
+<section id="convex">
+<h3>Convex<a class="headerlink" href="#convex" title="Permalink to this headline">#</a></h3>
+<p>A function is said to be strictly convex when a line connecting any two points of the function lies strictly above the function</p>
+<figure align="center">
+<!--<img src="./convexplot.png" width="300" >-->
+<img src="http://54.243.252.9/ce-5319-webroot/ce5319jb/lessons/lesson10/convexplot.png" width="300" >
+<figcaption>Figure X: Convex Function </figcaption>
+</figure>
+<p>A function is convex if the second derivative is greater than or equal 0</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial ^2 f}{\partial x} \ge 0\]</div>
+<p>Strictly convex if greater than</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial ^2 f}{\partial x} \gt 0\]</div>
+</section>
+<section id="concave">
+<h3>Concave<a class="headerlink" href="#concave" title="Permalink to this headline">#</a></h3>
+<p>A function is concave function when a line joining any two points lies below the function
+The second derivative of a concave</p>
+<figure align="center">
+<!--<img src="./concaveplot.png" width="300" >-->
+<img src="http://54.243.252.9/ce-5319-webroot/ce5319jb/lessons/lesson10/concaveplot.png" width="300" >
+<figcaption>Figure X: Concave Function </figcaption>
+</figure>
+<p>A function is concave if the second derivative is greater than or equal 0</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial ^2 f}{\partial x} \le 0\]</div>
+<p>Strictly concave if less than</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial ^2 f}{\partial x} \lt 0\]</div>
+</section>
+<section id="global-optimum-values">
+<h3>Global Optimum Values<a class="headerlink" href="#global-optimum-values" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="local-optimal-values">
+<h3>Local Optimal Values<a class="headerlink" href="#local-optimal-values" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -445,13 +672,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Simulation Models for Decision Support</p>
+            <p class="prev-next-title">Modeling for Decision Support</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../decisionSupportbyLP/linearprograms.html" title="next page">
+    <a class='right-next' id="next-link" href="1topic.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linear Programming for Decision Support</p>
+        <p class="prev-next-title">Scheduling Example</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

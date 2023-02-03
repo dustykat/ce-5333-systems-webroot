@@ -15,7 +15,12 @@ chapters:
 - file: chapters/simulation/simulation
 
 - file: chapters/optimization/optimization
+  sections:
+  - file: chapters/optimization/1topic
+  - file: chapters/optimization/2topic
+  - file: chapters/optimization/3topic
   
+
 - file: chapters/decisionSupportbyLP/linearprograms
 
 - file: chapters/decisionSupportbyNLP/nonlinearprograms
@@ -27,3 +32,4 @@ chapters:
 - file: chapters/waterqualityallocation/waterqualityallocation
   sections:
   - file: chapters/waterqualityallocation/reactortank
+  - file: chapters/qual2e/qual2e
