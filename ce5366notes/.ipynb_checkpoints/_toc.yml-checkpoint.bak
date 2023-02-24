@@ -1,0 +1,26 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: chapters/introduction/introduction
+  sections:
+  - file: chapters/introduction/resourcesallocation
+
+- file: chapters/economics/economics
+  sections:
+  - file: chapters/economics/policyoverride
+
+- file: chapters/simulation/simulation
+
+- file: chapters/optimization/optimization
+  
+- file: chapters/decisionSupportbyLP/linearprograms
+
+- file: chapters/decisionSupportbyNLP/nonlinearprograms
+
+- file: chapters/watersupplyallocation/watersupplyallocation
+
+- file: chapters/waterqualityallocation/waterqualityallocation
+  
