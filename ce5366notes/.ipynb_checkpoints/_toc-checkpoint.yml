@@ -23,6 +23,8 @@ chapters:
 
 - file: chapters/decisionSupportbyLP/linearprograms
 
+- file: chapters/gwexample/gwexample
+
 - file: chapters/decisionSupportbyNLP/nonlinearprograms
 
 - file: chapters/watersupplyallocation/watersupplyallocation

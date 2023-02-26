@@ -1,9 +1,28 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Gradient Descent Methods
+# ![downhill-004.png](attachment:e5cc2360-f341-41d2-b854-dce2031abdde.png)# Gradient Descent Methods
+# 
+# [Ossenbruggen (1985-ish)](http://54.243.252.9/ce-5333-systems-webroot/3-Readings/OptimizeOssenbruggen/OptimizeOssenbruggen.pdf)
 # 
 # ## Steepest Descent
+# 
+# [Singer, Y (2016) "Gradient Descent Methods" lecture notes from AM 221: Advanced Optimization](https://people.seas.harvard.edu/~yaron/AM221-S16/lecture_notes/AM221_lecture9.pdf)
+# 
+# The following are from [Burkov, A (2019) *excerpts from* The Hundred-Page Machine Learning Book - Draft](http://ema.cri-info.cm/wp-content/uploads/2019/07/2019BurkovTheHundred-pageMachineLearning.pdf)
+# 
+# ![](downhill-001.png)
+# 
+# ![](downhill-002.png)
+# 
+# ![](downhill-003.png)
+# 
+# ![](downhill-004.png)
+# 
+# ![](downhill-006.png)
+# 
+# ![](downhill-007.png)
+# 
 # 
 # ## Using Packages
 # 

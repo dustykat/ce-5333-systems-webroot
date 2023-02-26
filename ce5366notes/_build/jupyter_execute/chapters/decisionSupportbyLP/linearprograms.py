@@ -48,10 +48,6 @@ opt
 # 2. [scipy.optimize.linprog (Documentation)](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html) 
 # 3. [Priyansh Soni (2020) Linear Programming using Python. Towards Data Science (Blog Post)](https://towardsdatascience.com/linear-programming-using-python-priyansh-22b5ee888fe0)
 # 
-
-# In[2]:
-
-
 from mip import Model, xsum, maximize, BINARY
 
 p = [10, 13, 18, 31, 7, 15]
