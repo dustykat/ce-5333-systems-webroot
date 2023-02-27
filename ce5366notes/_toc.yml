@@ -28,8 +28,8 @@ chapters:
 - file: chapters/decisionSupportbyNLP/nonlinearprograms
 
 - file: chapters/watersupplyallocation/watersupplyallocation
-  sections:
-  - file: chapters/watersupplyallocation/multistage
+#  sections:
+#  - file: chapters/watersupplyallocation/multistage
 
 - file: chapters/waterqualityallocation/waterqualityallocation
   sections:
