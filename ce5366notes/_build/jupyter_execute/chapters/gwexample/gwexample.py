@@ -16,7 +16,7 @@
 # 
 # ![](aquiferplan.png)
 # 
-# A single consumer (city) exists in Cell 18, with a demand of 7.0$Mm^3/yr$. The cost to pump water and deliver to Cell 18 is (\\$1.00 + \\$0.50/km))/$Mm^3$
+# A single consumer (city) exists in Cell 18, with a demand of 7.0$Mm^3/yr$. The cost to pump water and deliver to Cell 18 is (\$1.00 + \$0.50/km))/$Mm^3$
 # The distance from a pumping cell to cell 18 expressed in cartesian coordinates is $D_i−>18 = \sqrt{(x_i − x_{18})^2 + (y_i − y_{18})^2}$ where the x and y values are the coordinates to the cell centers in kilometers (using the lower right corner is the coordinate system origin). 
 # 
 # For example:
