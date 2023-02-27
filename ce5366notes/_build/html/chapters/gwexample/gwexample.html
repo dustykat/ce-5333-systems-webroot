@@ -177,24 +177,17 @@
    Non-Linear Programming for Decision Support
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../watersupplyallocation/watersupplyallocation.html">
    Water Supply Allocation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waterqualityallocation/waterqualityallocation.html">
    Water Quality Allocation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -360,10 +353,13 @@ Therefore, water level at the distance of 1 km and 3 km from the lake should be 
 <p>Precipitation with a rate of <span class="math notranslate nohighlight">\(N = 100 mm/yr\)</span> is replenishing the aquifer uniformly over the entire area. The entire replenishment drains through the aquifer into the lake. The aquifer is a homogeneous-isotropic aquifer and has a transmissivity of <span class="math notranslate nohighlight">\(T = 1000 m^2/day\)</span>.</p>
 <p><img alt="" src="../../_images/aquiferplan.png" /></p>
 <p>A single consumer (city) exists in Cell 18, with a demand of 7.0<span class="math notranslate nohighlight">\(Mm^3/yr\)</span>. The cost to pump water and deliver to Cell 18 is (\<span class="math notranslate nohighlight">\(1.00 + \\\)</span>0.50/km))/<span class="math notranslate nohighlight">\(Mm^3\)</span>
-The distance from a pumping cell to cell 18 expressed in cartesian coordinates is <span class="math notranslate nohighlight">\(D_i−&gt;18 = \sqrt{(x_i − x_{18})^2 + (y_i − y_{18})^2}\)</span> where the x and y values are the coordinates to the cell centers in kilometers (using the lower right corner is the coordinate system origin).
-For example the cost to pump 1 <span class="math notranslate nohighlight">\(Mm^3\)</span> of water from Cell 18 is \<span class="math notranslate nohighlight">\(1.00 , 
-whereas to cost to pump 1 \)</span>Mm^3<span class="math notranslate nohighlight">\( water from Cell 3 is \\\)</span>1.00 + \<span class="math notranslate nohighlight">\(3.00 = \\\)</span>4.00. The first \$1.00 is the pumping cost and the remainder is the transport cost to deliver water to Cell 18.
-The management objective is to supply the demand at Cell 18 at minimum cost, while maintaining the minimal water levels in Cells 16 – 25 to protect the water quality of the aquifer (and prevent lake water from entering the aquifer).</p>
+The distance from a pumping cell to cell 18 expressed in cartesian coordinates is <span class="math notranslate nohighlight">\(D_i−&gt;18 = \sqrt{(x_i − x_{18})^2 + (y_i − y_{18})^2}\)</span> where the x and y values are the coordinates to the cell centers in kilometers (using the lower right corner is the coordinate system origin).</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>The cost to pump <span class="math notranslate nohighlight">\(1~Mm^3\)</span> of water from Cell 18 is $1.00,</p></li>
+<li><p>The cost to pump <span class="math notranslate nohighlight">\(1~Mm^3\)</span> water from Cell 3 and transport it to Cell 18 is $1.00 + $3.00 = $4.00. The first monetary unit is the pumping cost and the remainder is the transport cost to deliver water to Cell 18.</p></li>
+</ul>
+<p>The management objective is to supply the demand at Cell 18 at minimum cost, while maintaining the minimal water levels in Cells 16 – 25 to protect the water quality of the aquifer (and prevent lake water from entering the aquifer).</p>
 <p>To construct the management model we can first specify the decision variables which are <span class="math notranslate nohighlight">\(P_i\)</span> the pumping rate in <span class="math notranslate nohighlight">\(M m^3\)</span> in the i − th cell. Then we need to specify the cost function</p>
 <div class="math notranslate nohighlight">
 \[ C = \sum_{i=1}^{25}(1+[\sqrt{(x_i − x_{18})^2 + (y_i − y_{18})^2}] )\times P_i \]</div>
