@@ -2,7 +2,6 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "74221f54-17c1-4181-8546-9a51c4ba9665",
    "metadata": {},
    "source": [
     "# Allocation under Uncertainty\n",
@@ -21,20 +20,20 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a61072e3-0d85-4bf4-8eca-b8776cb679e9",
    "metadata": {},
    "source": [
     "## Two-Stage Linear Programming Example\n",
     "\n",
     "A water master for a region can divert water from an unregulated stream to three consumers: a municipality, an industrial concern, and an agricultural concern. A schematic of the system is shown in {numref}`diversionsketch`.\n",
     "\n",
-    "```{figure} diversionsketch.png\n",
+    "<!--```{figure} diversionsketch.png\n",
     "---\n",
     "width: 400px\n",
     "name: diversionsketch\n",
     "---\n",
     "Schematic of water supply allocation problem\n",
     "```\n",
+    "-->\n",
     "\n",
     "The industrial and agricultural concern are expanding and would like to know how much water they can expect. If the water supply is insufficient, the expansion plans will be curtailed.\n",
     "\n",
@@ -52,7 +51,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "78df3b42-21db-49b7-8f78-d6761d8ca778",
    "metadata": {},
    "source": [
     "### Linear Programming Model Framework\n",
@@ -88,13 +86,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "bebf9173-d3bb-4829-9bc6-b817b86558c7",
    "metadata": {},
    "source": [
     "### Approximating the Random Variable\n",
     "\n",
     "To approximate the value of the expectation, we can approximate the distribution of $Q$ with a discrete distribution as in {numref}`flowprob`.  For a continuous distribution, some kind of discretization will be required to keep the LP manageable.\n",
     "\n",
+    "<!--\n",
     "```{figure} flowprob.png\n",
     "---\n",
     "width: 400px\n",
@@ -102,6 +100,7 @@
     "---\n",
     "Streamflow probability distribution\n",
     "```\n",
+    "-->\n",
     "\n",
     "The approximation allows the estimation of the expected cost (of failed delivery) to be manifest in the objective function, and the supply availability in the constraint set.  The model in this instance (3 customers, 3 possible supply rates) has a total of 12 decision variables; the three contracted deliveries and nine deficits (from the 3 possible supply rates).\n",
     "\n",
@@ -159,7 +158,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dfa6b415-6237-4247-9698-8c4ac3a61030",
    "metadata": {
     "tags": []
    },
@@ -185,18 +183,19 @@
     "The values in these two tables are inserted into their representative locations in the linear program structure (cost function and constraint set). Once these values are supplied, then we have the necessary set-up for a Linear Program and can apply our tools to its solution.\n",
     "So the linear program to be solved is depicted in {numref}`linearP`\n",
     "\n",
+    "<!--\n",
     "```{figure} linearP.png\n",
     "---\n",
     "width: 600px\n",
     "name: linearP\n",
     "---\n",
     "Linear Program Structure for Water Supply Allocation Problem\n",
-    "```"
+    "```\n",
+    "-->"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "614977f6-6618-4dc1-95a9-ea08f46cf10c",
    "metadata": {},
    "source": [
     "### Linear Programming Model Solution\n",
@@ -215,8 +214,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
-   "id": "24f3e9d5-95bd-48a8-8dc6-5d66945971a2",
+   "execution_count": 4,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -280,7 +278,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a44ab54a-0c9f-470d-89d3-76e83f5ba507",
    "metadata": {},
    "source": [
     "Finally all the elements are sent to the algorithm which builds and solves the example problem.\n",
@@ -289,8 +286,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
-   "id": "c1a62e77-29eb-4736-b505-a4237f0c7225",
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
@@ -307,7 +303,7 @@
        "       x: array([2., 3., 5., 0., 1., 5., 0., 0., 0., 0., 0., 0.])"
       ]
      },
-     "execution_count": 3,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -319,7 +315,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6e595978-c9cf-48d1-9297-91ab8470524c",
    "metadata": {},
    "source": [
     "Once the script run, the output then needs to be interpreted. Observe that the output object is a dictionary-type object, which we access from the element keys.  The objective value is converted back to the maximization case by multiplying by -1.\n",
@@ -331,8 +326,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
-   "id": "8cb5cd44-99c4-43cd-9d8f-df66b6519eb1",
+   "execution_count": 6,
    "metadata": {},
    "outputs": [
     {
@@ -366,7 +360,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "c61a1733-b479-4112-bed3-634940b9ee26",
    "metadata": {},
    "source": [
     "The optimal solution is to contract deliveries to each user at the full amount they request.\n",
@@ -387,7 +380,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "39236a4d-ffb6-4583-985c-c043d9e147c1",
    "metadata": {},
    "source": [
     "## Exercises\n",
@@ -402,7 +394,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "de010d87-b275-47a5-ac57-e1f011c69ad8",
    "metadata": {},
    "source": [
     "## References\n",
@@ -415,7 +406,6 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0d3776cf-7c7c-498f-b74f-bc9c9e69a6a8",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -423,9 +413,9 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 38",
+   "display_name": "Python 3",
    "language": "python",
-   "name": "python38"
+   "name": "python3"
   },
   "language_info": {
    "codemirror_mode": {
@@ -437,7 +427,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.8.3"
+   "version": "3.8.10"
   }
  },
  "nbformat": 4,
