@@ -23,7 +23,8 @@ def writearray(matrix):
     import numpy as np
     new_list = list(np.around(np.array(matrix), 6))    
     for ir in range(nr):
-        print(ir,new_list[ir][:])
+        #print(ir,new_list[ir][:])
+        print(new_list[ir][:])
     return()
 verbose = False
 echoinput = False
@@ -187,4 +188,9 @@ b = numpy.array(head)
 #print("----")
 #writearray(head)
 #print("----")
-print(head)
+outfile = infile.strip(".txt") + '.out'
+localfile = open(outfile,"w") # connect and read file for 2D gw model
+localfile.writelines(outfile+'\n')
+for row in range(len(head)):
+    localfile.write(" ".join(map(str,head[row]))+"\n")
+localfile.close()
