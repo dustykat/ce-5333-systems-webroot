@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Quality Simulation &#8212; Water Resources Management</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="QUAL2" href="qual2e.html" />
+    <link rel="prev" title="Example: Reactor-Tank System" href="../waterqualityallocation/reactortank.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/WRMlogo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Water Resources Management</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to CE-5366 Water Resources Manglement
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../introduction/introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/resourcesallocation.html">
+     Resource Allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../economics/economics.html">
+   Financial Planning and Management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../economics/policyoverride.html">
+     Policy Overrides
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../simulation/simulation.html">
+   Modeling for Decision Support
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../optimization/optimization.html">
+   Optimization Modeling for Decision Support
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/1topic.html">
+     Scheduling Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/2topic.html">
+     Grid Search Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/3topic.html">
+     Steepest Descent
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../decisionSupportbyLP/linearprograms.html">
+   Linear Programming for Decision Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gwexample/gwexample.html">
+   Groundwater Water Allocation by Simulation-Optimization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../decisionSupportbyNLP/nonlinearprograms.html">
+   Non-Linear Programming for Decision Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../watersupplyallocation/watersupplyallocation.html">
+   Water Supply Allocation under Uncertainty
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../waterqualityallocation/waterqualityallocation.html">
+   Water Quality Allocation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waterqualityallocation/reactortank.html">
+     Example: Reactor-Tank System
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Water Quality Simulation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="qual2e.html">
+     QUAL2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/chapters/qual2e/waterqualitymodels.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters/qual2e/waterqualitymodels.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapters/qual2e/waterqualitymodels.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#water-quality-measures">
+   Water Quality Measures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-dissolved-oxygen">
+   Modeling Dissolved Oxygen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-common-models-software">
+   Some Common Models (Software)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="water-quality-simulation">
+<h1>Water Quality Simulation<a class="headerlink" href="#water-quality-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="water-quality-measures">
+<h2>Water Quality Measures<a class="headerlink" href="#water-quality-measures" title="Permalink to this headline">¶</a></h2>
+<p>There are several common (legacy) measures of water quality, including:</p>
+<ul class="simple">
+<li><p>pH: This measures the acidity or alkalinity of the water. The pH scale ranges from 0 to 14, with 7 being neutral. pH is important because it can affect the solubility of minerals in the water, which in turn can impact the health of aquatic organisms.</p></li>
+<li><p>Dissolved Oxygen (DO): This measures the amount of oxygen dissolved in the water. DO is important for aquatic organisms to survive, as they need oxygen to breathe. Low levels of DO can indicate pollution or other environmental problems.</p></li>
+<li><p>Turbidity: This measures the amount of suspended particles in the water. Turbidity can impact water quality because it can affect the ability of light to penetrate the water, which in turn can impact aquatic plants and animals.</p></li>
+<li><p>Total Dissolved Solids (TDS): This measures the amount of dissolved solids, such as minerals, salts, and metals, in the water. High levels of TDS can indicate pollution and can affect the taste and smell of drinking water.</p></li>
+<li><p>Biochemical Oxygen Demand (BOD): This measures the amount of oxygen required by microorganisms to break down organic matter in the water. High levels of BOD can indicate pollution and can lead to oxygen depletion in the water, which can harm aquatic organisms.</p></li>
+</ul>
+<p>These measures are important because they help us understand the health of aquatic ecosystems, as well as the safety and suitability of water for drinking, recreation, and other uses. By monitoring these measures, we can identify environmental problems and take action to protect and improve water quality.</p>
+<p>The list above are important traditional (legacy) metrics of water quality; there are also newer and emerging measures that have gained importance in recent years. Some of these include:</p>
+<ul class="simple">
+<li><p>Microplastics: This refers to tiny pieces of plastic that have broken down from larger plastic items and are now found in the water. Microplastics can harm aquatic organisms and potentially affect human health if they enter the food chain.</p></li>
+<li><p>Emerging contaminants: These are a wide range of chemicals, including pharmaceuticals, personal care products, and pesticides, that are increasingly being detected in water sources. These contaminants can have negative effects on human health and aquatic ecosystems, even at low levels.</p></li>
+<li><p>Microbial contamination: This refers to the presence of harmful bacteria, viruses, and parasites in the water, which can cause illness in humans and animals; admittedly a legacy pollutant, but still of importance - particularly novel and engineered pathogens.</p></li>
+</ul>
+<p>These emergent measures are important because they reflect new and emerging threats to water quality, and can help us better understand the complex interactions between human activities and the environment. By monitoring and addressing these measures, we can better protect and preserve our water resources.</p>
+</div>
+<div class="section" id="modeling-dissolved-oxygen">
+<h2>Modeling Dissolved Oxygen<a class="headerlink" href="#modeling-dissolved-oxygen" title="Permalink to this headline">¶</a></h2>
+<p>Modeling dissolved oxygen in a river involves simulating the various physical, chemical, and biological processes that affect the concentration of dissolved oxygen in the water. Some of the key processes that need to be considered in a dissolved oxygen modeling framework are:</p>
+<ul class="simple">
+<li><p>Hydrodynamics: The flow of water in the river can affect the concentration of dissolved oxygen by transporting it downstream or mixing it with other water bodies.</p></li>
+<li><p>Oxygen demand: The rate at which dissolved oxygen is consumed by microorganisms, plant matter, and other organic materials in the river.</p></li>
+<li><p>Oxygen supply: The rate at which oxygen is supplied to the river through processes such as photosynthesis, atmospheric exchange, and inflows from upstream sources.</p></li>
+<li><p>Temperature: The temperature of the water affects the solubility of oxygen, with higher temperatures leading to lower levels of dissolved oxygen. Changes in water temperature can have significant impacts on aquatic ecosystems, including changes in the distribution and abundance of species, and the timing of important ecological processes such as migration and reproduction.</p></li>
+<li><p>Turbidity: The amount of suspended particles in the water can affect the penetration of sunlight, which in turn can impact photosynthesis and the production of dissolved oxygen.</p></li>
+<li><p>Nutrient levels: The presence of nutrients such as nitrogen and phosphorus can affect the growth of aquatic plants and algae, which in turn can affect the production of dissolved oxygen. Nutrient pollution can cause harmful algal blooms, which can be toxic to humans and wildlife, as well as deplete oxygen in the water, causing dead zones.</p></li>
+</ul>
+<p>To model dissolved oxygen in a river, various mathematical models such as the Streeter-Phelps model, the one-dimensional water quality model, and the two-dimensional hydrodynamic water quality model can be used. These models incorporate the above processes and help predict the spatial and temporal variations in dissolved oxygen concentration in the river.</p>
+</div>
+<div class="section" id="some-common-models-software">
+<h2>Some Common Models (Software)<a class="headerlink" href="#some-common-models-software" title="Permalink to this headline">¶</a></h2>
+<p>There are several software programs available for modeling dissolved oxygen in rivers, some of which are:</p>
+<ul class="simple">
+<li><p>CE-QUAL-W2: This is a two-dimensional, laterally averaged, hydrodynamic and water quality model developed by the US Army Corps of Engineers. It simulates dissolved oxygen, temperature, nutrients, and algae dynamics in lakes, estuaries, and rivers.</p></li>
+<li><p>WASP: The Water Quality Analysis Simulation Program is a one-dimensional, dynamic, and steady-state model developed by the US Environmental Protection Agency. It models dissolved oxygen, temperature, nutrients, and organic matter dynamics in rivers and streams.</p></li>
+<li><p>EFDC: The Environmental Fluid Dynamics Code is a three-dimensional, hydrodynamic and water quality model developed by the US Army Corps of Engineers. It simulates dissolved oxygen, temperature, nutrients, algae, and sediment dynamics in estuaries, lakes, and rivers.</p></li>
+<li><p>QUAL2K: This is a one-dimensional, dynamic, and steady-state water quality model developed by the US Environmental Protection Agency. It simulates dissolved oxygen, temperature, nutrients, organic matter, and sediment dynamics in rivers and streams.</p></li>
+<li><p>MIKE 21/3: This is a suite of two-dimensional and three-dimensional hydrodynamic and water quality models developed by DHI Water &amp; Environment. It simulates dissolved oxygen, temperature, nutrients, algae, and sediment dynamics in estuaries, lakes, and rivers.</p></li>
+</ul>
+<p>These software programs provide different levels of complexity and features, and the choice of a particular program depends on the specific research questions, available data, and computational resources.</p>
+<p>In this course we will use QUAL2E a predecesssor of QUAL2K above, its more-or-less the same computation engine - but using it server-side will save the need for installation.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/qual2e"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../waterqualityallocation/reactortank.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Example: Reactor-Tank System</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="qual2e.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">QUAL2</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G. Cleveland, Ph.D., P.E., M.ASCE, F.EWRI.<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

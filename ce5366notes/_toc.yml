@@ -34,4 +34,5 @@ chapters:
 - file: chapters/waterqualityallocation/waterqualityallocation
   sections:
   - file: chapters/waterqualityallocation/reactortank
+  - file: chapters/qual2e/waterqualitymodels
   - file: chapters/qual2e/qual2e
